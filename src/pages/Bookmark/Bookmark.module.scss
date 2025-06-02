@@ -1,0 +1,154 @@
+@use '../../scss/' as *;
+
+.bookmarkWrapper {
+    padding-block-start: 50px;
+    padding-inline: var(--padding-page);
+
+    .bookmarkContainer {
+        max-width: var(--container-width);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .bookmarkContainer__header {
+            @include flex(center, center);
+            gap: 10px;
+            font-size: 1.2em;
+            color: var(--text-color);
+        }
+
+        .bookmarkContainer__body {
+            padding-block-start: 50px;
+
+            .bookmarkContainer__body__header {
+                @include flex(center, space-between);
+
+                h3 {
+                    color: var(--text-color);
+                }
+
+                .bookmarkContainer__body__header__actions {
+                    display: flex;
+                    gap: 20px;
+
+                    span {
+                        color: var(--grey);
+                    }
+
+                    .bookmarkContainer__body__header__title {
+                        @include mobilesm() {
+                            display: none;
+                        }
+                    }
+
+                    .bookmarkContainer__body__header__actions__btn {
+                        @include flex(center, center);
+                        gap: 5px;
+                        position: relative;
+                        cursor: pointer;
+                        padding: 12px;
+
+                        &:hover,
+                        &.active {
+                            background-color: var(--navbar-color);
+
+                            span,
+                            svg {
+                                color: var(--text-color);
+                                fill: var(--text-color);
+                                stroke: var(--text-color);
+                            }
+                        }
+
+                        .bookmarkContainer__body__header__actions__btn__title {
+                            @include flex(center, center);
+                            color: var(--grey);
+                            gap: 5px;
+                            font-size: 1rem;
+                            text-transform: uppercase;
+
+                            @include mobilesm() {
+                                display: none;
+                            }
+                        }
+
+                        .bookmarkContainer__body__browser__dropdown__container {
+                            z-index: 2;
+                            position: absolute;
+                            inset-block-start: 100%;
+                            inset-inline-end: 0;
+                            min-width: 100%;
+                            width: 200px;
+                            background-color: var(--navbar-color);
+
+                            .bookmarkContainer__body__browser__dropdown__container__scrollable {
+                                padding-block: calc(var(--padding-div) - 10px);
+
+                                .bookmarkContainer__body__browser__dropdown__container__item {
+                                    padding-inline: var(--padding-div);
+                                    padding-block: calc(var(--padding-div) / 1.3);
+                                    width: 100%;
+                                    color: var(--grey);
+                                    font-size: 1rem;
+                                    text-transform: capitalize;
+
+                                    @include flex(center, flex-start);
+                                    gap: 10px;
+
+                                    &:hover {
+                                        background-color: var(--background-color);
+                                        color: var(--text-color);
+                                    }
+
+                                    &.active {
+                                        color: var(--text-color);
+                                    }
+                                }
+                            }
+                        }
+
+                        &.hover {
+                            svg,
+                            .bookmarkContainer__body__header__actions__btn__title {
+                                fill: var(--text-hover-color);
+                                stroke: var(--text-hover-color);
+                                color: var(--text-hover-color);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .bookmarkContainer__body__filter {
+                min-height: 30px;
+
+                .bookmarkContainer__body__filter__btn {
+                    @include flex(center, center);
+                    gap: 5px;
+
+                    h4.bookmarkContainer__body__filter__btn__title {
+                        font-size: 1rem;
+                        font-weight: 500;
+                        color: var(--text-hover-color);
+                    }
+
+                    span.bookmarkContainer__body__filter__btn__title {
+                        font-size: 1rem;
+                        line-height: 1;
+                        text-transform: capitalize;
+                    }
+
+                    &:hover {
+                        h4.bookmarkContainer__body__filter__btn__title {
+                            color: red;
+                        }
+                        span.bookmarkContainer__body__filter__btn__title {
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

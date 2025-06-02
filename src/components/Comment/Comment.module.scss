@@ -1,0 +1,358 @@
+@use '../../scss/' as *;
+@use 'sass:math';
+
+.commentContainer {
+    @include flex(flex-start, flex-start);
+
+    .commentContainer__avatar {
+        border: 2px solid;
+        color: var(--grey);
+    }
+
+    .commentContainer__content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+
+        .commentContainer__content__header {
+            display: flex;
+            flex-direction: column;
+            gap: 7.5px;
+
+            .commentContainer__content__header__group__main {
+                @include flex(center, space-between);
+
+                .commentContainer__content__header__group__main__user {
+                    @include flex(center, flex-start);
+                    gap: 10px;
+
+                    .commentContainer__content__header__name {
+                        color: var(--text-color);
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                    }
+
+                    .commentContainer__content__header__timeAgo {
+                        font-weight: 400;
+                        font-size: 1rem;
+                        color: var(--grey);
+                    }
+                }
+            }
+            .commentContainer__content__header__group__extra {
+                @include flex(center, flex-start);
+                gap: 10px;
+                flex-wrap: wrap;
+
+                .commentContainer__content__header__title {
+                    font-weight: 500;
+                    font-size: 1rem;
+                    padding: 2px 6px;
+
+                    color: var(--primary-color);
+                    border-radius: calc(var(--border-radius) / 1.5);
+                    border: 1px solid;
+                }
+
+                .commentContainer__content__header__title[data-color='gradient'] {
+                    background: linear-gradient(45deg, white, red, orange, yellow, green, cyan, blue, violet, black);
+                    background-size: 300% 300%;
+                    animation: gradientAnimation 5s infinite linear;
+                    background-clip: text;
+                    color: white;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                @keyframes gradientAnimation {
+                    0% {
+                        background-position: 0% 50%;
+                    }
+                    50% {
+                        background-position: 100% 50%;
+                    }
+                    100% {
+                        background-position: 0% 50%;
+                    }
+                }
+
+                $colors: (
+                    'red': red,
+                    'blue': blue,
+                    'green': green,
+                    'yellow': yellow,
+                    'cyan': cyan,
+                    'magenta': magenta,
+                    'black': black,
+                    'white': white,
+                    'gray': gray,
+                    'orange': orange,
+                    'purple': purple,
+                    'pink': pink,
+                    'brown': brown,
+                    'lime': lime,
+                    'teal': teal,
+                    'navy': navy,
+                    'gold': gold,
+                    'silver': silver,
+                    'violet': violet,
+                    'indigo': indigo,
+                    'aqua': aqua,
+                );
+
+                @each $name, $color in $colors {
+                    .commentContainer__content__header__title[data-color='#{$name}'] {
+                        color: $color;
+                        border-color: $color;
+                    }
+                }
+
+                .commentContainer__content__header__level {
+                    font-weight: 900;
+                    font-size: 1rem;
+                    display: inline-block;
+                    color: rgb(255, 255, 255);
+                }
+
+                @for $i from 1 through 100 {
+                    .commentContainer__content__header__level[data-level='#{$i}'] {
+                        $percent: math.div($i, 100);
+                        $r: 0;
+                        $g: 0;
+                        $b: 0;
+
+                        @if $percent <= 0.2 {
+                            $r: 0 + (50 * math.div($percent, 0.2));
+                            $g: 120 + (85 * math.div($percent, 0.2));
+                            $b: 255 - (205 * math.div($percent, 0.2));
+                        } @else if $percent <= 0.4 {
+                            $r: 50 + (205 * math.div($percent - 0.2, 0.2));
+                            $g: 205;
+                            $b: 50 - (50 * math.div($percent - 0.2, 0.2));
+                        } @else if $percent <= 0.6 {
+                            $r: 255;
+                            $g: 255 - (90 * math.div($percent - 0.4, 0.2));
+                            $b: 0;
+                        } @else if $percent <= 0.8 {
+                            $r: 255;
+                            $g: 165 - (165 * math.div($percent - 0.6, 0.2));
+                            $b: 0;
+                        } @else {
+                            $r: 255 - (127 * math.div($percent - 0.8, 0.2));
+                            $g: 0;
+                            $b: 0 + (128 * math.div($percent - 0.8, 0.2));
+                        }
+
+                        color: rgb($r, $g, $b);
+                    }
+                }
+            }
+        }
+
+        .commentContainer__content__body {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            align-items: flex-start;
+
+            .commentContainer__content__username {
+                color: var(--primary-color);
+                font-weight: 600;
+                text-decoration: none;
+                display: inline;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .commentContainer__content__body__text {
+                display: inline;
+                font-size: 1.3rem;
+                line-height: 1.6;
+                color: var(--text-color);
+                white-space: pre-wrap;
+                word-break: break-word;
+
+                &.clamp {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+
+        .commentContainer__content__body__text__show {
+            span {
+                color: var(--primary-color);
+                font-style: italic;
+            }
+        }
+
+        .commentContainer__content__body__actions {
+            @include flex(center, flex-start);
+            gap: 10px;
+            flex-wrap: wrap;
+            font-size: 1.2rem;
+
+            .commentContainer__content__body__actions__btn {
+                span {
+                    display: flex;
+                    gap: 5px;
+                }
+
+                .commentContainer__content__body__actions__btn__title {
+                    color: var(--grey);
+                    font-size: 0.8em;
+                }
+            }
+        }
+
+        .commentContainer__content__reply {
+            margin-block-start: 10px;
+        }
+
+        .commentContainer__show__child {
+            .commentContainer__show__child__btn {
+                color: var(--primary-color);
+                @include flex(center, center);
+                gap: 10px;
+                cursor: pointer;
+            }
+        }
+
+        .commentContainer__child {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .commentContainer__child__loadmore {
+                .commentContainer__child__loadmore__btn {
+                    color: var(--primary-color);
+                    @include flex(center, center);
+                    gap: 10px;
+                    cursor: pointer;
+                }
+            }
+
+            .commentContainer__child__comment__loading {
+                margin: 0 auto; /* Để căn giữa */
+                border: 4px solid var(--hover-color); /* Màu nền */
+                border-top: 4px solid var(--primary-color); /* Màu của vòng tròn quay */
+                border-radius: 50%;
+                width: 25px; /* Đường kính vòng tròn */
+                height: 25px;
+                animation: spin 1s linear infinite; /* Quay vòng tròn */
+            }
+
+            /* Hiệu ứng quay vòng tròn */
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+
+    .commentContainer__content__actions {
+        .commentContainer__content__actions__btn {
+            @include flex(center, center);
+            gap: 5px;
+            position: relative;
+            cursor: pointer;
+            padding: 8px;
+
+            &:hover,
+            &.active {
+                background-color: var(--navbar-color);
+
+                svg {
+                    color: var(--text-color);
+                    fill: var(--text-color);
+                    stroke: var(--text-color);
+                }
+            }
+
+            &.hover {
+                svg {
+                    fill: var(--text-hover-color);
+                    stroke: var(--text-hover-color);
+                    color: var(--text-hover-color);
+                }
+            }
+
+            .commentContainer__content__actions__btn__dropdown {
+                display: none;
+                z-index: 2;
+                position: absolute;
+                inset-block-start: 100%;
+                inset-inline-end: 0;
+                background-color: var(--navbar-color);
+
+                &.active {
+                    display: block;
+                }
+
+                .commentContainer__content__actions__btn__dropdown__scrollable {
+                    padding-block: calc(var(--padding-div) - 15px);
+
+                    .commentContainer__content__actions__btn__dropdown__item {
+                        padding-inline: var(--padding-div);
+                        padding-block: calc(var(--padding-div) / 1.3);
+                        width: 100%;
+                        color: var(--grey);
+                        font-size: 1.2rem;
+                        text-transform: capitalize;
+
+                        @include flex(center, flex-start);
+                        gap: 10px;
+
+                        input {
+                            appearance: none;
+                            width: 16px;
+                            height: 16px;
+                            border: 2px solid #16cfb7;
+                            border-radius: 50%;
+                            position: relative;
+
+                            &:checked {
+                                border-color: #16cfb7;
+                            }
+
+                            &:checked::before {
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                width: 8px;
+                                height: 8px;
+                                background-color: #16cfb7;
+                                border-radius: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                        }
+
+                        label.active {
+                            color: var(--text-color);
+                        }
+
+                        &:hover {
+                            background-color: var(--background-color);
+                            color: var(--text-color);
+                        }
+
+                        &.active {
+                            color: var(--text-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

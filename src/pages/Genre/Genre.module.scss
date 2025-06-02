@@ -1,0 +1,49 @@
+@use '../../scss/' as *;
+
+.genreWrapper {
+    padding-block-start: 50px;
+
+    .genreContainer {
+        padding-inline: var(--padding-page);
+        max-width: var(--container-width);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .genreContainer__header {
+            color: var(--text-color);
+            font-size: 2rem;
+            text-align: center;
+
+            .genreContainer__header__title {
+                @include flex(center, center);
+                gap: 10px;
+                text-transform: capitalize;
+
+                .genreContainer__header__img {
+                    object-fit: contain;
+                    width: 1em;
+                    height: 1em;
+                }
+            }
+
+            .genreContainer__header__description {
+                padding-block-start: var(--padding-div);
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .genreWrapper__body {
+        padding-block-start: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-inline: var(--padding-page);
+
+        @include tabletsm(){
+            padding-inline: unset;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@use '../../scss/' as *;
+
+.emptyContainer {
+    border: 0.5px dashed var(--white);
+    @include flex(center, center);
+    flex-direction: column;
+    gap: 20px;
+    padding-block: 20px;
+
+    img {
+        max-width: 250px;
+        max-height: 250px;
+        width: 25vw;
+        height: 25vw;
+        object-fit: contain;
+        display: block;
+    }
+
+    p {
+        text-align: center;
+        width: 100%;
+        max-width: 25rem;
+        color: #dadada;
+    }
+}

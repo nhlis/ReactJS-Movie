@@ -1,0 +1,111 @@
+@use '../../scss/' as *;
+
+.newWrapper {
+    padding-inline: var(--padding-page);
+
+    .newContainer {
+        max-width: var(--container-width);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+
+        .newContainer__header {
+            @include flex(center, space-between);
+            padding-block-start: 50px;
+
+            .newContainer__header__title {
+                @include flex(flex-start, center);
+                flex-direction: column;
+                gap: 10px;
+
+                h3 {
+                    font-size: 2.5rem;
+                    font-weight: 500;
+                    color: var(--text-color);
+                }
+            }
+
+            .newContainer__header__actions {
+                display: flex;
+
+                .newContainer__header__actions__btn {
+                    @include flex(center, center);
+                    gap: 5px;
+                    position: relative;
+                    cursor: pointer;
+                    padding: 12px;
+
+                    &:hover,
+                    &.active {
+                        background-color: var(--navbar-color);
+
+                        span,
+                        svg {
+                            color: var(--text-color);
+                            fill: var(--text-color);
+                            stroke: var(--text-color);
+                        }
+                    }
+
+                    .newContainer__header__actions__btn__title {
+                        @include flex(center, center);
+                        color: var(--grey);
+                        gap: 5px;
+                        font-size: 1rem;
+                        text-transform: uppercase;
+
+                        @include mobilesm() {
+                            display: none;
+                        }
+                    }
+
+                    &.hover {
+                        svg,
+                        .newContainer__header__actions__btn__title {
+                            fill: var(--text-hover-color);
+                            stroke: var(--text-hover-color);
+                            color: var(--text-hover-color);
+                        }
+                    }
+                }
+            }
+        }
+
+        .newContainer__filter {
+            min-height: 30px;
+
+            .newContainer__filter__btn {
+                @include flex(center, center);
+                gap: 5px;
+
+                h4.newContainer__filter__btn__title {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: var(--text-hover-color);
+                }
+
+                span.newContainer__filter__btn__title {
+                    font-size: 1rem;
+                    line-height: 1;
+                    text-transform: capitalize;
+                }
+
+                &:hover {
+                    h4.newContainer__filter__btn__title {
+                        color: red;
+                    }
+                    span.newContainer__filter__btn__title {
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+
+        .newContainer__content {
+            padding-block-start: var(--padding-div);
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        }
+    }
+}

@@ -1,0 +1,151 @@
+@use '../../scss/' as *;
+
+.simulcastWrapper {
+    padding-inline: var(--padding-page);
+
+    .simulcastContainer {
+        max-width: var(--container-width);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+
+        .simulcastContainer__header {
+            @include flex(center, space-between);
+            padding-block-start: 50px;
+
+            .simulcastContainer__header__title {
+                @include flex(flex-start, center);
+                flex-direction: column;
+                gap: 10px;
+
+                h3 {
+                    font-size: 2.5rem;
+                    font-weight: 500;
+                    color: var(--text-color);
+                }
+            }
+
+            .simulcastContainer__header__actions {
+                display: flex;
+
+                .simulcastContainer__header__actions__btn {
+                    @include flex(center, center);
+                    gap: 5px;
+                    position: relative;
+                    cursor: pointer;
+                    padding: 12px;
+
+                    &:hover,
+                    &.active {
+                        background-color: var(--navbar-color);
+
+                        span,
+                        svg {
+                            color: var(--text-color);
+                            fill: var(--text-color);
+                            stroke: var(--text-color);
+                        }
+                    }
+
+                    span {
+                        color: var(--grey);
+                        gap: 5px;
+                        font-size: 1rem;
+                        text-transform: uppercase;
+                    }
+
+                    .simulcastContainer__header__actions__btn__title {
+                        color: var(--text-color-second);
+                        text-transform: uppercase;
+                        font-size: 1rem;
+
+                        @include mobilesm() {
+                            display: none;
+                        }
+                    }
+
+                    &.hover {
+                        svg,
+                        .simulcastContainer__header__actions__btn__title {
+                            fill: var(--text-hover-color);
+                            stroke: var(--text-hover-color);
+                            color: var(--text-hover-color);
+                        }
+                    }
+
+                    &.active {
+                        .simulcastContainer__header__actions__dropdown {
+                            opacity: 1;
+                            visibility: inherit;
+                        }
+                    }
+
+                    .simulcastContainer__header__actions__dropdown {
+                        opacity: 0;
+                        visibility: hidden;
+                        z-index: 2;
+                        position: absolute;
+                        inset-block-start: 100%;
+                        inset-inline-end: 0;
+                        min-width: 100%;
+                        width: 200px;
+                        background-color: var(--navbar-color);
+
+                        .simulcastContainer__header__actions__dropdown__scrollable {
+                            padding-block: calc(var(--padding-div) - 10px);
+                            height: 50vh;
+                            overflow: auto;
+
+                            &.h-auto {
+                                height: auto;
+                            }
+
+                            .simulcastContainer__header__actions__dropdown__group {
+                                padding: 0;
+                                border: none;
+
+                                .simulcastContainer__header__actions__dropdown__title {
+                                    justify-content: flex-start;
+                                    text-transform: capitalize;
+                                    font-weight: 500;
+                                    color: var(--text-color);
+                                    padding-inline: var(--padding-div);
+                                    padding-block: calc(var(--padding-div) / 2);
+                                    font-size: 1.3rem;
+                                }
+                            }
+
+                            .simulcastContainer__header__actions__dropdown__item {
+                                padding-inline: var(--padding-div);
+                                padding-block: calc(var(--padding-div) / 1.3);
+                                width: 100%;
+                                color: var(--grey);
+                                font-size: 1rem;
+                                text-transform: capitalize;
+
+                                @include flex(center, flex-start);
+                                gap: 10px;
+
+                                &:hover {
+                                    background-color: var(--background-color);
+                                    color: var(--text-color);
+                                }
+
+                                &.active {
+                                    color: var(--text-color);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .syntheticContainer__content {
+            padding-block-start: var(--padding-div);
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        }
+    }
+}

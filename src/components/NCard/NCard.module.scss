@@ -1,0 +1,103 @@
+@use '../../scss/' as *;
+
+.newsCard {
+    display: flex;
+    cursor: pointer;
+    width: 100%;
+    overflow: hidden;
+    align-items: flex-start;
+    padding: 10px;
+
+    &.large {
+        display: unset;
+        padding: 10px;
+
+        .newsCard__image {
+            max-width: unset;
+        }
+
+        .newsCard__content {
+            padding: unset;
+            flex: unset;
+            height: unset;
+            margin-top: 20px;
+
+            .newsCard__title {
+                color: var(--text-color);
+                font-size: 1.5rem;
+                font-weight: 400;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                line-clamp: 2;
+            }
+        }
+    }
+
+    &:hover {
+        background-color: var(--hover-color);
+        opacity: 0.75;
+
+        .newsCard__image {
+            img {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .newsCard__image {
+        @include flex(center, center);
+        position: relative;
+        width: 100%;
+        min-width: 100px;
+        max-width: 125px;
+
+        img {
+            border-radius: var(--border-radius);
+            width: 100%;
+            object-fit: contain;
+            display: block;
+        }
+    }
+
+    .newsCard__content {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex: 1;
+        padding: 0 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 5px;
+        font-size: 1rem;
+
+        .newsCard__title {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            font-weight: 400;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-clamp: 1;
+        }
+
+        .newsCard__episode {
+            @include flex(center, flex-start);
+            color: #777;
+        }
+
+        .newsCard__captions {
+            @include flex(center, space-between);
+            color: #777;
+
+            .newsCard__captions__munites {
+                color: #2abdbb;
+            }
+        }
+    }
+}

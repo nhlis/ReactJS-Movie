@@ -1,0 +1,203 @@
+@use '../../scss/' as *;
+
+.episode__card {
+    display: block;
+    color: white;
+    flex: 1 1 auto;
+    cursor: pointer;
+    position: relative;
+
+    &:hover > .episode__card__hover__container {
+        opacity: 1;
+    }
+
+    .episode__card__container {
+        padding: 15px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .episode__card__content {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+
+            .episode__card__image {
+                position: relative;
+
+                img {
+                    border-radius: var(--border-radius);
+                    width: 100%;
+                    display: block;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .episode__card__premium {
+                    @include flex(center, center);
+
+                    padding: 2px;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    position: absolute;
+                    left: 5px;
+                    top: 5px;
+                    font-size: 1rem;
+                    border-radius: 0.25rem;
+
+                    color: var(--premium-color);
+                    flex-direction: row;
+                    gap: 5px;
+                }
+
+                .episode__card__duration {
+                    padding: 2px;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    position: absolute;
+                    right: 5px;
+                    bottom: 5px;
+                    font-size: 1rem;
+                    color: var(--white);
+                }
+            }
+
+            span {
+                line-height: 1.2;
+                font-size: 1.1rem;
+            }
+
+            .dot {
+                color: var(--grey);
+            }
+
+            .episode__card__title {
+                @include flex(flex-start, space-between);
+                flex-direction: column;
+                gap: 10px;
+
+                .episode__card__title__overview {
+                    color: var(--text-color-second);
+                    font-size: 1rem;
+                    text-overflow: ellipsis;
+                    white-space: normal;
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-box-orient: vertical;
+                    word-spacing: 2px;
+                    line-height: 1.2;
+                    -webkit-line-clamp: 2;
+                    line-clamp: 2;
+                }
+
+                .episode__card__title__episode {
+                    text-overflow: ellipsis;
+                    white-space: normal;
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-box-orient: vertical;
+                    line-height: 1.2;
+
+                    span {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .episode__card__hover__container {
+        @include flex(flex-start, space-between);
+        padding: 15px;
+        background-color: var(--hover-color);
+        position: absolute;
+        top: 0;
+        inset-inline-end: 0; // Tự động đổi giữa `left: 0` và `right: 0` theo hướng ngôn ngữ
+        width: 100%;
+        height: 100%;
+        font-size: 1.2rem;
+        opacity: 0;
+        flex-direction: column;
+        border-radius: var(--border-radius);
+
+        .episode__card__hover__container__group__contents {
+            @include flex(flex-start, space-between);
+            flex-direction: column;
+            gap: 5px;
+
+            .episode__card__hover__title {
+                @include flex(flex-start, space-between);
+                flex-direction: column;
+                gap: 10px;
+
+                .episode__card__hover__title__overview {
+                    color: var(--text-color-second);
+                    font-size: 1rem;
+                    text-overflow: ellipsis;
+                    white-space: normal;
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-box-orient: vertical;
+                    word-spacing: 2px;
+                    line-height: 1.2;
+                    -webkit-line-clamp: 2;
+                    line-clamp: 2;
+                }
+
+                .episode__card__hover__title__episode {
+                    text-overflow: ellipsis;
+                    white-space: normal;
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-box-orient: vertical;
+                    word-spacing: 2px;
+                    line-height: 1.2;
+                    -webkit-line-clamp: 2;
+                    line-clamp: 2;
+
+                    span {
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .episode__card__hover__releaseDate {
+                margin-left: -5px;
+                font-size: 1rem;
+            }
+
+            .episode__card__hover__description {
+                .episode__card__hover__description__text {
+                    text-overflow: ellipsis;
+                    white-space: normal;
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-line-clamp: 2;
+                    line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    font-size: 0.8em;
+                    word-spacing: 2px;
+                    line-height: 1.5;
+                }
+            }
+        }
+
+        .episode__card__hover__container__group__actions {
+            @include flex(flex-start, space-between);
+            flex-direction: row;
+            width: 100%;
+
+            .episode__card__hover__container__play {
+                margin-left: -5px;
+
+                span {
+                    @include flex(center, center);
+                    color: var(--primary-color);
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

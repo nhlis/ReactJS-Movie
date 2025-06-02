@@ -1,0 +1,27 @@
+// Mixin for small mobile devices (up to 576px)
+@mixin mobilesm() {
+    @media only screen and (max-width: 576px) {
+        @content; // Insert styles here
+    }
+}
+
+// Mixin for large mobile devices (up to 768px)
+@mixin mobilelg() {
+    @media only screen and (max-width: 768px) {
+        @content; // Insert styles here
+    }
+}
+
+// Mixin for small tablet devices (up to 992px)
+@mixin tabletsm() {
+    @media only screen and (max-width: 992px) {
+        @content; // Insert styles here
+    }
+}
+
+// Mixin for large tablet devices (up to 1280px)
+@mixin tabletlg() {
+    @media only screen and (max-width: 1280px) {
+        @content; // Insert styles here
+    }
+}
