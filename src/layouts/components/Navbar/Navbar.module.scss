@@ -67,23 +67,29 @@
 
         @include tabletsm() {
             display: block;
+
             position: absolute;
             left: 0;
             top: var(--navbar-height);
-            opacity: 0;
             padding-block: unset;
             background-color: var(--hover-color);
             min-width: 250px;
             height: calc(100vh - var(--navbar-height));
             overflow: auto;
 
+            // Trạng thái ẩn
+            opacity: 0;
             transform: translateX(-100%);
-            transition: transform 0.1s ease-in-out;
+            pointer-events: none;
+            visibility: hidden;
+
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
             &.active {
-                visibility: inherit;
                 opacity: 1;
                 transform: translateX(0);
+                pointer-events: auto;
+                visibility: visible;
             }
         }
 

@@ -91,7 +91,7 @@ function Bookmark() {
                 <div className={cx('bookmarkContainer__body')}>
                     {isLoading && <div className={cx('status')}></div>}
 
-                    {!isLoading && bookmarkOverviews && bookmarkOverviews?.pages.flat().length > 0 ? (
+                    {!isLoading && bookmarkOverviews && bookmarkOverviews?.pages.flatMap((page) => page.overviews).length > 0 && (
                         <>
                             <div className={cx('bookmarkContainer__body__header')}>
                                 <h3>Bookmark Activity</h3>
@@ -166,9 +166,9 @@ function Bookmark() {
 
                             {hasNextPage && !isFetchingNextPage && <div ref={loadMoreRef} style={{ height: 1 }} />}
                         </>
-                    ) : (
-                        isEmpty && <Empty img={`https://lh3.googleusercontent.com/d/${data.imgSrc.EMPTY_LISTS}`} text="You don't have any bookmarks yet." />
                     )}
+
+                    {isEmpty && <Empty img={`https://lh3.googleusercontent.com/d/${data.imgSrc.EMPTY_LISTS}`} text="You don't have any bookmarks yet." />}
                 </div>
             </div>
         </div>
