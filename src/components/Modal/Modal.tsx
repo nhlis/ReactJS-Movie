@@ -4,7 +4,6 @@ import { IoClose } from 'react-icons/io5';
 import { useEffect } from 'react';
 import useAuthStore from '../../stores/auth.store';
 import { EColor, ESize } from '../../enums';
-import { BuildUrlImgDrive } from '../../utils/build-url-img-drive';
 import { Button } from '../Button/Button';
 import { data } from '../../constants';
 
@@ -40,7 +39,7 @@ function Modal() {
                         <IoClose size={ESize.ICON + 5} color={EColor.WHITE_COLOR} />
                     </div>
                     <div className={cx('modal__img')}>
-                        <img src={BuildUrlImgDrive(data.imgSrc.AUTH_HIME, 500)} alt="" loading="lazy" />
+                        <img src={data.imgSrc.POPUP_HIME} alt="" loading="lazy" />
                     </div>
 
                     <div className={cx('modal__content')}>

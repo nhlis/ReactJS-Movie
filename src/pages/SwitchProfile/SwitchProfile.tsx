@@ -1,11 +1,10 @@
 import classNames from 'classnames/bind';
 import styles from './SwitchProfile.module.scss';
 import { data } from '../../constants';
-import { BuildUrlImgDrive } from '../../utils/build-url-img-drive';
 import useAuthStore from '../../stores/auth.store';
 import Avatar from '../../components/Assets/Avatar';
 import { EAuthState, EColor } from '../../enums';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { routes } from '../../configs';
 import { Button } from '../../components/Button/Button';
 import Logo from '../../components/Assets/Logo';
@@ -20,9 +19,9 @@ function SwitchProfile() {
     return (
         <div className={cx('switch_profile__wrapper')}>
             <div className={cx('switch_profile__container')}>
-                <div className={cx('switch_profile__background')}>
-                    <img src={BuildUrlImgDrive(data.imgSrc.BACKGROUND, 2000)} alt="" />
-                </div>
+                <figure className={cx('switch_profile__background')}>
+                    <img src={data.imgSrc.BACKGROUND} alt="" />
+                </figure>
                 <div className={cx('switch_profile__content')}>
                     <div className={cx('switch_profile__content__container')}>
                         <div className={cx('switch_profile__title')}>

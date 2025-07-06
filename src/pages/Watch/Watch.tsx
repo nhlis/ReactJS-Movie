@@ -8,9 +8,9 @@ import { EAgeRating, EColor, EMovieType, EReactionType, ESize } from '../../enum
 import { AgeRating14, AgeRating16 } from '../../components/Assets/AgeRating';
 import { GrShareOption } from 'react-icons/gr';
 import { WCard } from '../../components/WCard/WCard';
-import { ListComment } from '../components/ListComment/ListComment';
+import { ListComment } from '../../components/ListComment/ListComment';
 import { getFingerprintId } from '../../utils/finger-print';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router';
 import { OverviewService } from '../../services/overview.service';
 import { useQuery } from '@tanstack/react-query';
 import { EpisodeService } from '../../services/episode.service';

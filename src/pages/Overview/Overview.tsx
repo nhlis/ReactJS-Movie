@@ -1,14 +1,14 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import classNames from 'classnames/bind';
 import styles from './Overview.module.scss';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router';
 import { useInfiniteQuery, useQuery } from '@tanstack/react-query';
 
 import { MdSort } from 'react-icons/md';
 import { BiCaretDown } from 'react-icons/bi';
 
 import { Slide } from '../../components/Slide/Slide';
-import { ListHeroCard } from '../components/ListHeroCard/ListHeroCard';
+import { ListHeroCard } from '../../components/ListHeroCard/ListHeroCard';
 
 import { OverviewService } from '../../services/overview.service';
 import { SeasonService } from '../../services/season.service';

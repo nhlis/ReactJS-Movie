@@ -8,11 +8,11 @@ import { EColor, EMovieType, ESize } from '../../enums';
 
 import { Button } from '../../components/Button/Button';
 import { PCard } from '../../components/PCard/PCard';
-import { GirdCard } from '../components/GirdCard/GirdCard';
+import { GirdCard } from '../../components/GirdCard/GirdCard';
 import { useFilters } from '../../hooks/useFilters';
 import { useClickOutside } from '../../hooks/useClickOutside';
-import FilterDropdown from '../components/FilterDropdown/FilterDropdown';
-import BrowseDropdown from '../components/BrowserDropdown/BrowserDropdown';
+import FilterDropdown from '../../components/FilterDropdown/FilterDropdown';
+import BrowseDropdown from '../../components/BrowserDropdown/BrowserDropdown';
 import { Filters, IOverviewResponse } from '../../interfaces/overview.interface';
 import { useLastedReleases } from '../../hooks/useQueryOverviews';
 

@@ -8,7 +8,7 @@ import { dateToString } from '../../utils/date-to-string';
 import { CiCalendar } from 'react-icons/ci';
 import { RiPlayLargeLine } from 'react-icons/ri';
 import { routes } from '../../configs';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 const cx = classNames.bind(styles);
 

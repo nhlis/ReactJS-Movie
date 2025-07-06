@@ -1,14 +1,14 @@
 import { useEffect } from 'react';
 import classNames from 'classnames/bind';
 import styles from './Home.module.scss';
-import { Calendar } from '../components/Calendar/Calender.tsx';
-import { Banner } from '../components/Banner/Banner.tsx';
-import { News } from '../components/News/News..tsx';
-import { LargeCard } from '../components/LargeCard/LargeCard.tsx';
-import { StillLooking } from '../components/StillLooking/StillLooking.tsx';
-import { ListHeroCard } from '../components/ListHeroCard/ListHeroCard.tsx';
+import { Calendar } from '../../components/Calendar/Calender.tsx';
+import { Banner } from '../../components/Banner/Banner.tsx';
+import { News } from '../../components/News/News..tsx';
+import { LargeCard } from '../../components/LargeCard/LargeCard.tsx';
+import { StillLooking } from '../../components/StillLooking/StillLooking.tsx';
+import { ListHeroCard } from '../../components/ListHeroCard/ListHeroCard.tsx';
 import { Slide } from '../../components/Slide/Slide.tsx';
-import { HeroSlide } from '../components/HeroSlide/HeroSlide.tsx';
+import { HeroSlide } from '../../components/HeroSlide/HeroSlide.tsx';
 import { data } from '../../constants/index.ts';
 import { getSeason } from '../../utils/get-season.ts';
 import { OverviewService } from '../../services/overview.service.ts';
@@ -107,7 +107,7 @@ function Home() {
             </div>
 
             <div className={cx('banner')}>
-                <Banner src={`https://lh3.googleusercontent.com/d/${data.imgSrc.BANNER1}`} />
+                <Banner src={data.imgSrc.BANNER1} />
             </div>
 
             <div className={cx('news')}>
@@ -115,7 +115,7 @@ function Home() {
             </div>
 
             <div className={cx('banner')}>
-                <Banner src={`https://lh3.googleusercontent.com/d/${data.imgSrc.BANNER3}`} />
+                <Banner src={data.imgSrc.BANNER2} />
             </div>
 
             {mostPopular && mostPopular.length > 0 && (

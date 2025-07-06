@@ -4,7 +4,7 @@ import { Button } from '../../components/Button/Button';
 import { MdOutlineClose } from 'react-icons/md';
 import { ESize } from '../../enums';
 import { useEffect, useRef, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router';
 import useDebounce from '../../hooks/useDebounce';
 import { PCard } from '../../components/PCard/PCard';
 import { Empty } from '../../components/Empty/Empty';
@@ -93,7 +93,7 @@ function Search() {
             <div className={cx('searchResult')}>
                 {!isLoading && dataOverviews && dataOverviews.overviews.length <= 0 && keywordDebounce?.length > 0 ? (
                     <div className={cx('searchResult__emty')}>
-                        <Empty img={`https://lh3.googleusercontent.com/d/${data.imgSrc.EMPTY_SEARCH}`} text="Sorry, no results were found. Check your spelling or try searching for something else." />
+                        <Empty img={data.imgSrc.EMPTY_SEARCH} text="Sorry, no results were found. Check your spelling or try searching for something else." />
                     </div>
                 ) : (
                     <div className={cx('searchResult__content')}>
