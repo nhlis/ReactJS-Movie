@@ -26,7 +26,7 @@ export const genres: Record<EMovieGenre, { img: string; description: string }> =
         description: "Slow and steady? That's exactly my kind of vibe.",
     },
     [EMovieGenre.COMEDY]: {
-        img: '=/genres/comedy.png',
+        img: '/genres/comedy.png',
         description: 'Find lots of laughs from classic slapstick to the in-too-deep cult classics.',
     },
     [EMovieGenre.SCIENCE_FICTION]: {
