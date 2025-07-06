@@ -1,0 +1,242 @@
+@use '../../scss/' as *;
+
+.watchWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    .watchContainer__player {
+        iframe,
+        img {
+            width: 100%;
+            aspect-ratio: 22/8;
+            border: none;
+
+            @include tabletlg() {
+                aspect-ratio: 20/9;
+            }
+
+            @include mobilesm() {
+                aspect-ratio: 16/9;
+            }
+        }
+    }
+
+    .watchContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding-inline: var(--padding-page);
+
+        .watchContainer__body {
+            max-width: var(--container-width);
+            margin: auto;
+            @include flex(flex-start, flex-start);
+            gap: 30px;
+            width: 100%;
+            position: relative;
+
+            @include mobilelg() {
+                flex-direction: column;
+                max-width: unset;
+            }
+
+            .watchContainer__media {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                flex: 1;
+                color: var(--text-color);
+
+                @include mobilelg() {
+                    max-width: 100%;
+                    width: 100%;
+                }
+
+                .watchContainer__media__header {
+                    @include flex(flex-start, space-between);
+
+                    .watchContainer__media__parent {
+                        @include flex(center, flex-start);
+                        flex-wrap: wrap;
+                        line-height: 2;
+
+                        .watchContainer__media__parent__title {
+                            cursor: pointer;
+                            display: flex;
+
+                            h4 {
+                                color: var(--primary-color);
+                                line-height: 1.5;
+                                text-align: justify;
+
+                                &:hover {
+                                    color: var(--text-color);
+                                }
+                            }
+
+                            &::after {
+                                content: '';
+                                display: block;
+                                align-self: stretch;
+                                width: 1px;
+                                background-color: #ffffff;
+                                margin-inline: 1rem;
+                            }
+                        }
+
+                        .watchContainer__media__parent__rating {
+                            cursor: pointer;
+                            display: flex;
+                            white-space: nowrap;
+                            color: var(--text-color);
+                            font-size: 1.2rem;
+
+                            .watchContainer__media__parent__rating__icon {
+                                display: flex;
+                                align-items: center;
+                                margin-block-end: 1px;
+                            }
+                        }
+                    }
+
+                    .watchContainer__media__header__bookmark {
+                        font-size: 1.5em;
+                    }
+                }
+
+                .watchContainer__media__heading {
+                    cursor: pointer;
+                    text-align: justify;
+                }
+
+                .watchContainer__media__tags {
+                    @include flex(center, flex-start);
+                    gap: 10px;
+                    color: var(--grey);
+                    font-size: 1.2rem;
+                }
+
+                .watchContainer__media__releaseDate {
+                    color: var(--primary-color);
+                    font-size: 1rem;
+                }
+
+                .watchContainer__media__actions {
+                    @include flex(center, space-between);
+
+                    .watchContainer__media__actions__reacts {
+                        @include flex(center, flex-start);
+                        gap: 20px;
+                    }
+                }
+
+                .watchContainer__media__expandable {
+                    max-height: 33px;
+                    overflow-y: hidden;
+
+                    &.active {
+                        max-height: unset;
+                        overflow-y: unset;
+                    }
+
+                    .watchContainer__media__expandable__section {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 50px;
+
+                        .watchContainer__media__expandable__section__text {
+                            text-overflow: ellipsis;
+                            white-space: normal;
+                            display: -webkit-box;
+                            overflow: hidden;
+                            -webkit-box-orient: vertical;
+                            font-size: 1.4rem;
+                            text-align: justify;
+                            word-spacing: 2px;
+                            line-height: 1.5;
+                        }
+
+                        .watchContainer__media__expandable__section__languages__details {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+
+                            .watchContainer__media__expandable__section__languages__details__row {
+                                @include flex(center, space-between);
+                                position: relative;
+                                gap: 75px;
+                                padding-bottom: 20px;
+
+                                &::after {
+                                    position: absolute;
+                                    content: '';
+                                    height: 1px;
+                                    width: 100%;
+                                    background-color: var(--grey);
+                                    bottom: 0;
+                                    left: 0;
+                                }
+
+                                .watchContainer__media__expandable__section__languages__details__row__collum span {
+                                    font-size: 1rem;
+                                    display: inline-block;
+                                    font-style: italic;
+                                    text-align: end;
+                                    max-width: 100%;
+                                    word-break: break-word;
+                                    overflow-wrap: break-word;
+                                    white-space: normal;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .watchContainer__media__expandable__btn__show {
+                    top: 100%;
+                    text-transform: uppercase;
+                    font-size: 1rem;
+                    color: var(--primary-color);
+                }
+            }
+
+            .watchContainer__episodes {
+                color: var(--text-color);
+                width: 100%;
+                max-width: 300px;
+                @include flex(flex-start, flex-start);
+                flex-direction: column;
+                gap: 30px;
+
+                @include mobilelg() {
+                    max-width: unset;
+                    flex-direction: unset;
+                }
+
+                @include mobilesm() {
+                    flex-direction: column;
+                }
+
+                .watchContainer__episodes__group {
+                    width: 100%;
+
+                    .watchContainer__episodes__title__next,
+                    .watchContainer__episodes__title__prev {
+                        cursor: default;
+                        line-height: 1.5;
+                    }
+
+                    .watchContainer__episodes__list {
+                        padding-top: var(--padding-div);
+                    }
+                }
+            }
+        }
+
+        .watchContainer__comments {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

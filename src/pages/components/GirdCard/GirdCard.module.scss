@@ -1,0 +1,35 @@
+@use '../../../scss/' as *;
+
+.girdCardContainer {
+    padding-block-start: var(--padding-div);
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(6, 1fr);
+
+    @include tabletsm() {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include mobilesm() {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &.lagre {
+        padding-block-start: var(--padding-div);
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+
+        @include tabletlg() {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include tabletsm() {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobilesm() {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

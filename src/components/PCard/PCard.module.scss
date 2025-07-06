@@ -1,0 +1,189 @@
+@use '../../scss/' as *;
+
+.posterCard__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 1 1 auto;
+    cursor: pointer;
+    aspect-ratio: 2/3;
+
+    &.useBackdrop {
+        aspect-ratio: 16/9;
+
+        .posterCard__hover__container .posterCard__hover__description span {
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+        }
+    }
+
+    &:hover {
+        .posterCard__content {
+            opacity: 0;
+        }
+
+        .posterCard__hover__container {
+            opacity: 1;
+        }
+    }
+
+    .posterCard__content {
+        opacity: 1;
+        width: 100%;
+        z-index: 1;
+        background-color: var(--background-color);
+
+        .posterCard__img {
+            border-radius: var(--border-radius);
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .posterCard__title {
+            display: -webkit-box; /* Kích hoạt multi-line ellipsis */
+            -webkit-box-orient: vertical; /* Định hướng dòng theo chiều dọc */
+            -webkit-line-clamp: 3; /* Giới hạn hiển thị 3 dòng */
+            line-clamp: 3;
+            overflow: hidden; /* Ẩn phần nội dung vượt quá */
+            text-overflow: ellipsis; /* Hiển thị dấu "..." */
+            color: var(--text-color);
+            font-size: 1.3rem;
+            font-weight: 500;
+            word-spacing: 2px;
+            margin: 10px 0 5px;
+            line-height: 1.5;
+        }
+
+        span {
+            color: #777;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+    }
+
+    .posterCard__hover__container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        padding: 15px;
+        z-index: 1;
+        color: var(--text-color);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            background-image: linear-gradient(rgba(23, 23, 23, 0.875), rgba(23, 23, 23, 0.875)), var(--bg-url);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: var(--border-radius);
+            transition: opacity 0.5s ease-in-out;
+            opacity: 1;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .posterCard__hover__container__overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(23, 23, 23, 0.875);
+            border-radius: var(--border-radius);
+            z-index: 0;
+        }
+
+        .posterCard__hover__title {
+            z-index: 2;
+            font-size: 1.4rem;
+            font-weight: 500;
+            word-spacing: 2px;
+
+            @include tabletlg() {
+                font-size: 1.2rem;
+            }
+        }
+
+        .posterCard__hover__rating {
+            z-index: 2;
+            @include flex(center, flex-start);
+            font-size: 1.2rem;
+            margin-top: 10px;
+
+            @include tabletlg() {
+                font-size: 1rem;
+            }
+        }
+
+        .posterCard__hover__season {
+            z-index: 2;
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: var(--grey);
+
+            @include tabletlg() {
+                font-size: 1rem;
+            }
+        }
+
+        .posterCard__hover__type {
+            z-index: 2;
+            @include flex(center, flex-start);
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: var(--grey);
+
+            @include tabletlg() {
+                font-size: 1rem;
+            }
+        }
+
+        .posterCard__hover__description {
+            z-index: 2;
+            margin-top: 10px;
+            height: 30px;
+
+            span {
+                text-overflow: ellipsis;
+                white-space: normal;
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-line-clamp: 7;
+                line-clamp: 7;
+                -webkit-box-orient: vertical;
+                font-size: 1.2rem;
+                word-spacing: 2px;
+                line-height: 1.5;
+
+                @include tabletlg() {
+                    font-size: 0.9rem;
+                    -webkit-line-clamp: 4;
+                    line-clamp: 4;
+                }
+            }
+        }
+
+        .posterCard__hover__actions {
+            z-index: 2;
+            @include flex(center, flex-start);
+            margin-top: auto;
+            gap: 10px;
+
+            span {
+                cursor: pointer;
+            }
+        }
+    }
+}

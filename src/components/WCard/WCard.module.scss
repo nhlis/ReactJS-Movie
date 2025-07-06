@@ -1,0 +1,83 @@
+@use '../../scss/' as *;
+
+.wCard {
+    display: flex;
+    flex: 1 1 auto;
+    cursor: pointer;
+    gap: 7.5px;
+    width: 100%;
+
+    &:hover {
+        background-color: var(--hover-color);
+        border-radius: var(--border-radius);
+        opacity: 0.8;
+    }
+
+    .wCard__image {
+        @include flex(center, center);
+        position: relative;
+        width: 40%;
+
+        img {
+            border-radius: var(--border-radius);
+            width: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .episodeCard__premium {
+            @include flex(center, center);
+
+            text-transform: uppercase;
+            padding: 2px 4px;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--premium-color);
+            flex-direction: row;
+            gap: 5px;
+
+            span {
+                font-size: 0.8em;
+            }
+        }
+
+        .episodeCard__duration {
+            padding: 2px 4px;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+            font-size: 0.9rem;
+            color: var(--white);
+        }
+    }
+
+    .wCard__content {
+        @include flex(flex-start, space-between);
+        width: 100%;
+        flex: 1;
+        flex-direction: column;
+        padding: 0 10px 0 5px;
+
+        .wCard__content__title {
+            font-weight: 500;
+            font-size: 1.3rem;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            line-clamp: 2;
+        }
+
+        .wCard__content__captions {
+            font-weight: 300;
+            font-size: 1rem;
+            color: var(--text-color-second);
+        }
+    }
+}

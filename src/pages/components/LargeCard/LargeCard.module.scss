@@ -1,0 +1,11 @@
+@use '../../../scss/' as *;
+
+.largeCard__container {
+    @include flex(center, center);
+    max-width: calc(var(--container-width) + 200px);
+    width: 100%;
+    flex-direction: column;
+    gap: 5rem;
+    padding-inline: var(--padding-page);
+    margin: auto;
+}

@@ -1,0 +1,152 @@
+@use '../../../scss/' as *;
+
+.news {
+    @include flex(center, center);
+    position: relative;
+    background-image: linear-gradient(180deg, #00ffff, #0e4c4c);
+
+    .newsBackground {
+        inset: 0;
+        position: absolute;
+        z-index: 0;
+        overflow: hidden;
+
+        .newsBackground__svg {
+            height: 64.25rem;
+            inset-block-start: 50%;
+            inset-inline-start: 50%;
+            position: absolute;
+            transform: translate(-46.5%, -62%);
+            width: 169.625rem;
+        }
+
+        .newsBackground__img {
+            height: 100%;
+            inset-block-start: 50%;
+            inset-inline-start: 50%;
+            width: 1080px;
+            padding-inline: 1.25rem;
+            position: absolute;
+            transform: translate(-50%, -50%);
+
+            @include tabletlg() {
+                display: none;
+            }
+
+            .newsBackground__img__hime {
+                width: 300px;
+                position: absolute;
+                inset-block-start: 0;
+                inset-inline-end: 100%;
+                transform: translate(0px, 80px);
+            }
+
+            .newsBackground__img__yuzu {
+                width: 200px;
+                inset-block-end: 0;
+                inset-inline-start: 100%;
+                position: absolute;
+                transform: translate(-50px, -75px);
+            }
+        }
+    }
+
+    .newsContent__container {
+        position: relative;
+        z-index: 1;
+        background-color: black;
+        margin: 50px 20px;
+        height: auto;
+        max-width: var(--container-width);
+        padding: 10px;
+
+        @include mobilesm() {
+            margin: unset;
+        }
+
+        .newsContent__header {
+            @include flex(center, space-between);
+            color: var(--text-color);
+            padding: 30px 30px 10px 30px;
+
+            @include mobilelg() {
+                padding: 20px 0px 0px 0px;
+            }
+
+            .newsContent__header__title {
+                font-weight: 600;
+                font-size: 2rem;
+            }
+
+            .newsContent__header__btn {
+                font-size: 1.3rem;
+                opacity: 0.5;
+            }
+        }
+
+        .newsContent {
+            padding: 20px;
+            display: flex;
+            width: 100%;
+
+            @include mobilelg() {
+                display: unset;
+            }
+
+            .newsContent__topNews {
+                width: 30%;
+                min-width: 250px;
+
+                @include mobilelg() {
+                    display: unset;
+                    width: 100%;
+                }
+
+                .newsContent__topNews__header {
+                    padding-left: 10px;
+                    color: var(--text-color);
+                    font-weight: 400;
+                }
+
+                .newsContent__topNews__content {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    height: 100%;
+
+                    @include mobilelg() {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
+            }
+
+            .newsContent__lastedNews {
+                flex: 1;
+                width: auto;
+
+                @include mobilelg() {
+                    display: unset;
+                    width: 100%;
+                }
+
+                .newsContent__lastedNews__header {
+                    padding-left: 10px;
+                    color: var(--text-color);
+                    font-weight: 400;
+                }
+                .newsContent__lastedNews__content {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 1rem;
+                    width: 100%;
+
+                    @include tabletlg() {
+                        grid-template-columns: 1fr;
+                        > :nth-child(n + 6) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

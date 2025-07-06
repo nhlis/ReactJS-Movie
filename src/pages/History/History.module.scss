@@ -1,0 +1,59 @@
+@use '../../scss/' as *;
+
+.historyWrapper {
+    padding-block-start: 50px;
+    padding-inline: var(--padding-page);
+
+    .historyContainer {
+        max-width: var(--container-width);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .historyContainer__header {
+            @include flex(center, center);
+            gap: 10px;
+            font-size: 1.2em;
+            color: var(--text-color);
+        }
+
+        .historyContainer__body {
+            padding-block-start: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            .historyContainer__body__header {
+                @include flex(center, space-between);
+
+                h3 {
+                    color: var(--text-color);
+                }
+
+                span {
+                    color: var(--grey);
+                }
+            }
+
+            .historyContainer__body__content {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                margin-inline: -15px;
+                gap: 5px;
+
+                @include tabletlg() {
+                    grid-template-columns: repeat(4, 1fr);
+                }
+
+                @include mobilelg() {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+
+                @include mobilesm() {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+@use '../../scss/' as *;
+@import 'normalize.css';
+
+:root {
+    --padding-page: 4vw;
+    --padding-div: 20px;
+
+    --margin-page: 4vw;
+    --margin-div: 10px;
+
+    --container-width: 1080px;
+
+    --primary-color: #00dede;
+    --primary-color-light: #31ffff;
+    --primary-color-dark: #009696;
+    --premium-color: #fab818;
+    --premium-hover-color: #ffc63f;
+
+    --white: #fff;
+    --black: #000;
+    --grey: #a0a0a0;
+
+    --navbar-height: 60px;
+    --border-radius: 5px;
+}
+
+.dark__theme {
+    --text-color: #fff;
+    --text-hover-color: #16cfb7;
+    --text-color-second: #cdcdcd;
+    --background-color: #000000;
+    --hover-color: #141519;
+    --border-color: #b2b2b2;
+    --navbar-color: #22252a;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 62.5%;
+    background-color: #000;
+}
+
+body {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+
+    cursor: default;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+button,
+input,
+[tabIndex] {
+    outline: none;
+    border: none;
+    background-color: unset;
+}
+
+a[href] {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1;
+}
+
+ul {
+    list-style: none;
+}
+
+svg {
+    @include flex(center, center);
+}
+
+img {
+    max-width: 100%;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.prevent__scroll {
+    overflow: hidden;
+    height: 100vh;
+}

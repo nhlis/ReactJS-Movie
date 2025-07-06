@@ -1,0 +1,24 @@
+@use '../../scss/' as *;
+
+.notificationWrapper {
+    padding-block-start: 50px;
+    padding-inline: var(--padding-page);
+
+    .notificationContainer {
+        max-width: var(--container-width);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .notificationContainer__header {
+            font-size: 1.2em;
+            color: var(--text-color);
+            text-align: center;
+        }
+
+        .notificationContainer__body {
+            padding-block-start: 50px;
+        }
+    }
+}

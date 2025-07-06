@@ -1,0 +1,120 @@
+@use '../../scss/' as *;
+
+.backdropCard {
+    cursor: pointer;
+    @include flex(center, space-between);
+    width: 100%;
+    color: white;
+    flex-direction: row;
+    gap: 20px;
+
+    @include mobilesm() {
+        flex-direction: column;
+    }
+
+    .backdropCard__image {
+        @include flex(center, center);
+        position: relative;
+        width: 45%;
+
+        @include mobilesm() {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            object-fit: contain;
+            display: block;
+        }
+    }
+
+    .backdropCard__content {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 55%;
+        gap: 10px;
+
+        @include mobilesm() {
+            width: 100%;
+            margin-left: unset;
+        }
+
+        .backdropCard__title {
+            color: var(--text-color);
+            font-size: 2rem;
+            font-weight: 500;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-clamp: 1;
+        }
+
+        .backdropCard__languages {
+            @include flex(center, space-between);
+
+            span {
+                color: #777;
+                font-size: 1rem;
+            }
+
+            .backdropCard__languages__bookmark {
+                display: none;
+
+                @include mobilesm() {
+                    display: block;
+                }
+            }
+        }
+        .backdropCard__description {
+            color: var(--text-color);
+            font-size: 1.2rem;
+            font-weight: 400;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-clamp: 3;
+        }
+
+        .backdropCard__actions {
+            margin-top: 30px;
+            height: auto;
+            width: auto;
+            gap: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            font-size: 1.3rem;
+
+            .backdropCard__actions__buttons__play,
+            .backdropCard__actions__buttons__bookmark {
+                font-weight: 700;
+                text-transform: uppercase;
+                color: var(--text-color);
+                height: 35px;
+                width: max-content;
+                min-width: 200px;
+
+                @include tabletsm() {
+                    width: 100%;
+                }
+            }
+
+            .backdropCard__actions__buttons__play {
+                color: black;
+            }
+
+            .backdropCard__actions__buttons__bookmark {
+                color: var(--primary-color);
+
+                @include mobilesm() {
+                    display: none;
+                }
+            }
+        }
+    }
+}
