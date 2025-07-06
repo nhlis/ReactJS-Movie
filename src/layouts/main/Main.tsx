@@ -1,9 +1,9 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import styles from './Main.module.scss';
-import { Navbar } from '../components/Navbar/Navbar';
-import { Footer } from '../components/Footer/Footer';
 import Modal from '../../components/Modal/Modal';
+import { Navbar } from '../../components/Navbar/Navbar';
+import { Footer } from '../../components/Footer/Footer';
 
 const cx = classNames.bind(styles);
 

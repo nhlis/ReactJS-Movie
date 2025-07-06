@@ -49,7 +49,7 @@ function History() {
                 .filter((h): h is IHistoryRespone => h !== undefined) || [] // Ensure non-undefined items
         );
     }, [historiesData]);
-    
+
     const isEmpty = !isLoading && histories.length === 0;
 
     const { clearHistories } = useMutationHistory();
@@ -97,7 +97,7 @@ function History() {
                         </>
                     )}
 
-                    {isEmpty && <Empty img={`https://lh3.googleusercontent.com/d/${data.imgSrc.EMPTY_LISTS}`} text="Your watch history will appear here once you start watching content." />}
+                    {isEmpty && <Empty img={data.imgSrc.EMPTY_LISTS} text="Your watch history will appear here once you start watching content." />}
                 </div>
             </div>
         </div>

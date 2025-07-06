@@ -19,7 +19,7 @@ const Notification: React.FC = () => {
                     <h2>Notification Center</h2>
                 </div>
                 <div className={cx('notificationContainer__body')}>
-                    <Empty img={`https://lh3.googleusercontent.com/d/${data.imgSrc.EMPTY_NOTIFICATION}`} text={'We’ll send you a notification when we have something new to share!'} />
+                    <Empty img={data.imgSrc.EMPTY_NOTIFICATION} text={'We’ll send you a notification when we have something new to share!'} />
                 </div>
             </div>
         </div>

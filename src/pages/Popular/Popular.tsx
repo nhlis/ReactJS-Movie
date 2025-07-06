@@ -6,11 +6,11 @@ import { MdSort } from 'react-icons/md';
 import { LuSettings2 } from 'react-icons/lu';
 import { PCard } from '../../components/PCard/PCard';
 import { Button } from '../../components/Button/Button';
-import { GirdCard } from '../components/GirdCard/GirdCard';
+import { GirdCard } from '../../components/GirdCard/GirdCard';
 import { useClickOutside } from '../../hooks/useClickOutside';
-import FilterDropdown from '../components/FilterDropdown/FilterDropdown';
+import FilterDropdown from '../../components/FilterDropdown/FilterDropdown';
 import { useFilters } from '../../hooks/useFilters';
-import BrowseDropdown from '../components/BrowserDropdown/BrowserDropdown';
+import BrowseDropdown from '../../components/BrowserDropdown/BrowserDropdown';
 import { Filters, IOverviewResponse } from '../../interfaces/overview.interface';
 import { useMostPopular } from '../../hooks/useQueryOverviews';
 

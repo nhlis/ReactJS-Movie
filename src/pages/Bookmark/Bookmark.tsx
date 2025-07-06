@@ -10,12 +10,12 @@ import { EColor, EMovieSort, EMovieType, ESize } from '../../enums';
 import { FaRegBookmark } from 'react-icons/fa';
 import { data } from '../../constants';
 import { useBookmarks } from '../../hooks/useQueryOverviews';
-import { GirdCard } from '../components/GirdCard/GirdCard';
+import { GirdCard } from '../../components/GirdCard/GirdCard';
 import { Filters } from '../../interfaces/overview.interface';
 import { PCard } from '../../components/PCard/PCard';
 import { useFilters } from '../../hooks/useFilters';
 import { useClickOutside } from '../../hooks/useClickOutside';
-import FilterDropdown from '../components/FilterDropdown/FilterDropdown';
+import FilterDropdown from '../../components/FilterDropdown/FilterDropdown';
 import { IOverviewResponse } from '../../interfaces/overview.interface';
 
 const cx = classNames.bind(styles);
@@ -168,7 +168,7 @@ function Bookmark() {
                         </>
                     )}
 
-                    {isEmpty && <Empty img={`https://lh3.googleusercontent.com/d/${data.imgSrc.EMPTY_LISTS}`} text="You don't have any bookmarks yet." />}
+                    {isEmpty && <Empty img={data.imgSrc.EMPTY_LISTS} text="You don't have any bookmarks yet." />}
                 </div>
             </div>
         </div>

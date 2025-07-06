@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 import classNames from 'classnames/bind';
 import styles from './Genre.module.scss';
 import { EMovieGenre } from '../../enums';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 import { slugToEnum, slugToString } from '../../utils/handle-slug';
-import { ListHeroCard } from '../components/ListHeroCard/ListHeroCard';
+import { ListHeroCard } from '../../components/ListHeroCard/ListHeroCard';
 import { data } from '../../constants';
 import { OverviewService } from '../../services/overview.service';
 import { useQueries } from '@tanstack/react-query';
@@ -47,7 +47,7 @@ function Genre() {
             <div className={cx('genreContainer')}>
                 <div className={cx('genreContainer__header')}>
                     <h2 className={cx('genreContainer__header__title')}>
-                        <img className={cx('genreContainer__header__img')} src={`https://lh3.googleusercontent.com/d/${img}=s96-c`} loading="lazy" />
+                        <img className={cx('genreContainer__header__img')} src={img} loading="lazy" />
                         {genres ? title : genres}
                     </h2>
                     <p className={cx('genreContainer__header__description')}>{description}</p>

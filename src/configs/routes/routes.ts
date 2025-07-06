@@ -9,7 +9,7 @@ export const routes = {
     new: '/new',
     popular: '/popular',
     notification: '/notification',
-    switch_profile: '/switch-profile',
+    switch: '/switch',
 
     simulcast: '/simulcast/:season',
     simulcastURL: (season: string) => `/simulcast/${season}`,

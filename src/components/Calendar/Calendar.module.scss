@@ -1,0 +1,75 @@
+@use '../../scss/' as *;
+
+.calendarContainer {
+    .calendarContainer__header {
+        @include flex(center, space-between);
+        color: var(--text-color);
+
+        .calendarContainer__header__left {
+            @include flex(center, center);
+            cursor: pointer;
+
+            .icon {
+                @include flex(center, center);
+            }
+
+            .calendarContainer__title {
+                margin-left: 10px;
+                font-size: 2rem;
+
+                &:hover {
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+
+    .calendarContainer__body {
+        padding-block: var(--padding-div);
+        color: var(--text-color);
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .calendarContainer__body__group {
+            .calendarContainer__body__header {
+                position: relative;
+                padding-block: var(--padding-div);
+
+                .calendarContainer__body__drivier::after {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    height: 1px;
+                    width: 100%;
+                    content: '';
+                    background-color: var(--border-color);
+                }
+            }
+
+            .calendarContainer__body__content {
+                margin-top: var(--margin-div);
+                display: grid;
+                gap: 10px;
+                grid-template-columns: repeat(auto-fill, minmax(21em, 1fr));
+            }
+        }
+    }
+
+    .calendarContainer__footer {
+        @include flex(center, center);
+        padding-top: 50px;
+
+        .calendarContainer__button {
+            background-color: #203844;
+            height: 35px;
+            width: 60%;
+            min-width: 100px;
+            font-size: 1rem;
+
+            &:hover {
+                background-color: #2f5160;
+            }
+        }
+    }
+}

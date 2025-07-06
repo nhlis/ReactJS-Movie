@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import styles from './WCard.module.scss';
 import classNames from 'classnames/bind';
 import { Crown } from '../Assets/Crown';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router';
 import { routes } from '../../configs';
 
 const cx = classNames.bind(styles);

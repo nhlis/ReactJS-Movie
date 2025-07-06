@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { routes } from '../configs';
-import Main from '../layouts/main/Main';
+import Main from '../layouts/Main/Main';
 import Overview from '../pages/Overview/Overview';
 import Watch from '../pages/Watch/Watch';
 import Home from '../pages/Home/Home';
@@ -31,7 +31,7 @@ const RoutesConfig: Router[] = [
     { path: routes.popular, component: Popular, layout: Main },
     { path: routes.simulcast, component: Simulcast, layout: Main },
     { path: routes.genres, component: Genre, layout: Main },
-    { path: routes.switch_profile, component: SwitchProfile, layout: undefined },
+    { path: routes.switch, component: SwitchProfile, layout: undefined },
 ];
 
 export default RoutesConfig;
