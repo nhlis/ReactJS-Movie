@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import Style from './components/Style/Style';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import AuthThentication from './layouts/Authentication/Authentication';
+import AuthThentication from './layouts/authentication/Authentication';
 
 const queryClient = new QueryClient({
     defaultOptions: {
