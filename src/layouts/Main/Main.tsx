@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import styles from '@/layouts/main/Main.module.scss';
+import styles from '@/layouts/Main/Main.module.scss';
 import Modal from '@/components/Modal/Modal';
 import { Navbar } from '@/components/Navbar/Navbar';
 import { Footer } from '@/components/Footer/Footer';
