@@ -84,7 +84,7 @@ export function ListComment({ episode_id, count_comment }: { episode_id: string;
                 <div className={cx('listCommentContainer__header__actions')}>
                     <button
                         ref={filterRef}
-                        className={cx('listCommentContainer__browser__actions__btn', { active: false })}
+                        className={cx('listCommentContainer__browser__actions__btn', { active: isFilterActive })}
                         onClick={() => {
                             setIsFilterActive(!isFilterActive);
                         }}
