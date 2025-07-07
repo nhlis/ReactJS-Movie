@@ -1,9 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import { useEffect } from 'react';
-import useAuthStore from '../stores/auth.store';
-import { AuthService } from '../services/auth.service';
-import { EAuthState } from '../enums';
-import { ProfileService } from '../services/profile.service';
+import useAuthStore from '@/stores/auth.store';
+import { AuthService } from '@/services/auth.service';
+import { EAuthState } from '@/enums';
+import { ProfileService } from '@/services/profile.service';
 
 export function useAuthSession() {
     const { setAuthStore, authuser: authuserFromStore, tokens } = useAuthStore();

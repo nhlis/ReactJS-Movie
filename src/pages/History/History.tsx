@@ -1,16 +1,16 @@
 import { useEffect, useMemo, useRef } from 'react';
 import classNames from 'classnames/bind';
 
-import styles from './History.module.scss';
-import { Empty } from '../../components/Empty/Empty';
-import { Button } from '../../components/Button/Button';
+import styles from '@/pages/History/History.module.scss';
+import { Empty } from '@/components/Empty/Empty';
+import { Button } from '@/components/Button/Button';
 import { FaHistory } from 'react-icons/fa';
-import { ESize } from '../../enums';
-import { data } from '../../constants';
-import { useHistories } from '../../hooks/useQueryHistories';
-import HCard from '../../components/HCard/HCard';
-import { IHistoryRespone } from '../../interfaces/history.interface';
-import useMutationHistory from '../../hooks/useMutationHistory';
+import { ESize } from '@/enums';
+import { data } from '@/constants';
+import { useHistories } from '@/hooks/useQueryHistories';
+import HCard from '@/components/HCard/HCard';
+import { IHistoryRespone } from '@/interfaces/history.interface';
+import useMutationHistory from '@/hooks/useMutationHistory';
 
 const cx = classNames.bind(styles);
 

@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useState } from 'react';
-import { RatingService } from '../services/rating.service';
+import { RatingService } from '@/services/rating.service';
 
 const useMutationRating = (payload: { old_rating_point?: number; overview_id: string }) => {
     const [localRating, setLocalRating] = useState(payload.old_rating_point ?? -1); // Khởi tạo với 0 nếu không có giá trị

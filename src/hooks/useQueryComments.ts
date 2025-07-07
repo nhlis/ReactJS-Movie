@@ -1,6 +1,6 @@
 import { useInfiniteQuery } from '@tanstack/react-query';
-import { ICommentRespone } from '../interfaces/comment.interface';
-import { EMovieSort } from '../enums';
+import { ICommentRespone } from '@/interfaces/comment.interface';
+import { EMovieSort } from '@/enums';
 
 interface CommentQueryPayload {
     _id: string;

@@ -1,6 +1,6 @@
-import { movieApi } from '../configs';
-import { IResponeSeachHistory } from '../interfaces/search-history.interface';
-import { httpMovieClient } from '../utils/http';
+import { movieApi } from '@/configs';
+import { IResponeSeachHistory } from '@/interfaces/search-history.interface';
+import { httpMovieClient } from '@/utils/http';
 
 export class SearchService {
     static async getSearchHistories(): Promise<{ search_histories: IResponeSeachHistory[]; hasMore: boolean }> {

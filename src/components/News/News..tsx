@@ -1,11 +1,11 @@
-import styles from './News.module.scss';
+import styles from '@/components/News/News.module.scss';
 import classNames from 'classnames/bind';
-import { NCard } from '../NCard/NCard';
-import { Button } from '../Button/Button';
+import { NCard } from '@/components/NCard/NCard';
+import { Button } from '@/components/Button/Button';
 import { GrFormNext } from 'react-icons/gr';
-import { EColor, ESize } from '../../enums';
-import { data } from '../../constants';
-import Notification from '../Assets/Notification';
+import { EColor, ESize } from '@/enums';
+import { data } from '@/constants';
+import Notification from '@/components/Assets/Notification';
 
 const cx = classNames.bind(styles);
 

@@ -1,6 +1,6 @@
-import { movieApi } from '../configs';
-import { ISeason } from '../interfaces/season.interface';
-import { httpMovieClient } from '../utils/http';
+import { movieApi } from '@/configs';
+import { ISeason } from '@/interfaces/season.interface';
+import { httpMovieClient } from '@/utils/http';
 
 export class SeasonService {
     static async getSeasonsByOverview(ovevriew_id: string): Promise<{ seasons: ISeason[] }> {

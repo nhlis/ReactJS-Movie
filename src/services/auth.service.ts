@@ -1,6 +1,6 @@
-import { authApi } from '../configs';
-import { ISessionAccount } from '../interfaces/auth.interface';
-import { httpAuthClient } from '../utils/http';
+import { authApi } from '@/configs';
+import { ISessionAccount } from '@/interfaces/auth.interface';
+import { httpAuthClient } from '@/utils/http';
 
 export class AuthService {
     static async getSessionAccounts(): Promise<{ is_session_available: boolean; requires_signin: boolean; accounts: ISessionAccount[] }> {

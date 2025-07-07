@@ -1,6 +1,6 @@
 import { create } from 'zustand';
-import { ISessionAccount } from '../interfaces/auth.interface';
-import { IProfileResponse } from '../interfaces/profile.interface';
+import { ISessionAccount } from '@/interfaces/auth.interface';
+import { IProfileResponse } from '@/interfaces/profile.interface';
 
 interface AuthState {
     is_fetched: boolean;

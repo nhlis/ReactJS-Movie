@@ -1,6 +1,6 @@
 import axios, { AxiosInstance } from 'axios';
-import useAuthStore from '../stores/auth.store';
-import { AuthService } from '../services/auth.service';
+import useAuthStore from '@/stores/auth.store';
+import { AuthService } from '@/services/auth.service';
 
 const createAxiosInstance = (baseUrl?: string): AxiosInstance => {
     const instance: AxiosInstance = axios.create({

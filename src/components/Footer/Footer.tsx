@@ -1,13 +1,13 @@
 import classNames from 'classnames/bind';
 
-import styles from './Footer.module.scss';
-import { Button } from '../../components/Button/Button';
+import styles from '@/components/Footer/Footer.module.scss';
+import { Button } from '@/components/Button/Button';
 import { FaFacebook, FaInstagram, FaTiktok, FaTwitter, FaYoutube } from 'react-icons/fa';
-import { Crown } from '../../components/Assets/Crown';
-import { EColor } from '../../enums';
-import { data } from '../../constants';
-import { routes } from '../../configs';
-import AuthProvider from '../../components/AuthProvider/AuthProvider';
+import { Crown } from '@/components/Assets/Crown';
+import { EColor } from '@/enums';
+import { data } from '@/constants';
+import { routes } from '@/configs';
+import AuthProvider from '@/components/AuthProvider/AuthProvider';
 
 const cx = classNames.bind(styles);
 

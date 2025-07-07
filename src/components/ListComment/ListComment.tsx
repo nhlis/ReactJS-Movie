@@ -1,15 +1,15 @@
 import classNames from 'classnames/bind';
-import styles from './ListComment.module.scss';
-import { EColor, EMovieSort, ESize } from '../../enums';
-import AddComment from '../AddComment/AddComment';
+import styles from '@/components/ListComment/ListComment.module.scss';
+import { EColor, EMovieSort, ESize } from '@/enums';
+import AddComment from '@/components/AddComment/AddComment';
 import { MdSort } from 'react-icons/md';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { useFilters } from '../../hooks/useFilters';
-import { useClickOutside } from '../../hooks/useClickOutside';
-import { CommentService } from '../../services/comment.service';
-import { ICommentRespone } from '../../interfaces/comment.interface';
-import { useCommentInfinite } from '../../hooks/useQueryComments';
-import { Comment } from '../Comment/Comment';
+import { useFilters } from '@/hooks/useFilters';
+import { useClickOutside } from '@/hooks/useClickOutside';
+import { CommentService } from '@/services/comment.service';
+import { ICommentRespone } from '@/interfaces/comment.interface';
+import { useCommentInfinite } from '@/hooks/useQueryComments';
+import { Comment } from '@/components/Comment/Comment';
 
 const cx = classNames.bind(styles);
 

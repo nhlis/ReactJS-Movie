@@ -1,5 +1,5 @@
-import { EMovieGenre } from '../../enums';
-import { stringToSlug } from '../../utils/handle-slug';
+import { EMovieGenre } from '@/enums';
+import { stringToSlug } from '@/utils/handle-slug';
 
 export const routes = {
     home: '/',

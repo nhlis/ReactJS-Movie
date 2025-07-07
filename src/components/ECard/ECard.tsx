@@ -1,13 +1,13 @@
-import styles from './ECard.module.scss';
+import styles from '@/components/ECard/ECard.module.scss';
 import classNames from 'classnames/bind';
-import { Crown } from '../Assets/Crown';
-import { Button } from '../Button/Button';
+import { Crown } from '@/components/Assets/Crown';
+import { Button } from '@/components/Button/Button';
 import { BiDotsVerticalRounded } from 'react-icons/bi';
-import { EColor, EMovieType, ESize } from '../../enums';
-import { dateToString } from '../../utils/date-to-string';
+import { EColor, EMovieType, ESize } from '@/enums';
+import { dateToString } from '@/utils/date-to-string';
 import { CiCalendar } from 'react-icons/ci';
 import { RiPlayLargeLine } from 'react-icons/ri';
-import { routes } from '../../configs';
+import { routes } from '@/configs';
 import { useNavigate } from 'react-router';
 
 const cx = classNames.bind(styles);

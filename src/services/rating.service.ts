@@ -1,5 +1,5 @@
-import { movieApi } from '../configs';
-import { httpMovieClient } from '../utils/http';
+import { movieApi } from '@/configs';
+import { httpMovieClient } from '@/utils/http';
 
 export class RatingService {
     static async postRating(payload: { overview_id: string; point: number }) {

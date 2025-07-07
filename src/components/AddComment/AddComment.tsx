@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import classNames from 'classnames/bind';
 
-import styles from './AddComment.module.scss';
-import { Emoji } from '../Assets/Emoji';
-import { Button } from '../Button/Button';
-import Avatar from '../Assets/Avatar';
-import useAuthStore from '../../stores/auth.store';
-import { useMutationPostComment } from '../../hooks/useMutationComment';
-import { EMovieSort } from '../../enums';
-import AuthProvider from '../AuthProvider/AuthProvider';
+import styles from '@/components/AddComment/AddComment.module.scss';
+import { Emoji } from '@/components/Assets/Emoji';
+import { Button } from '@/components/Button/Button';
+import Avatar from '@/components/Assets/Avatar';
+import useAuthStore from '@/stores/auth.store';
+import { useMutationPostComment } from '@/hooks/useMutationComment';
+import { EMovieSort } from '@/enums';
+import AuthProvider from '@/components/AuthProvider/AuthProvider';
 
 const cx = classNames.bind(styles);
 

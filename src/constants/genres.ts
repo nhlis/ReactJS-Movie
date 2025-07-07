@@ -1,4 +1,4 @@
-import { EMovieGenre } from '../enums';
+import { EMovieGenre } from '@/enums';
 
 export const genres: Record<EMovieGenre, { img: string; description: string }> = {
     [EMovieGenre.ACTION]: {

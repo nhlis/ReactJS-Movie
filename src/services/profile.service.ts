@@ -1,6 +1,6 @@
-import { movieApi } from '../configs';
-import { IProfileResponse } from '../interfaces/profile.interface';
-import { httpMovieClient } from '../utils/http';
+import { movieApi } from '@/configs';
+import { IProfileResponse } from '@/interfaces/profile.interface';
+import { httpMovieClient } from '@/utils/http';
 
 export class ProfileService {
     static async getProfile(): Promise<{ profile: IProfileResponse }> {

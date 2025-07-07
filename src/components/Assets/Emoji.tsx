@@ -1,4 +1,4 @@
-import { EColor } from '../../enums';
+import { EColor } from '@/enums';
 
 export function Emoji({
     className,

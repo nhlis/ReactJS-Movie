@@ -1,4 +1,4 @@
-import { EMovieType } from '../enums';
+import { EMovieType } from '@/enums';
 
 export interface IHistoryRespone {
     _id: string;

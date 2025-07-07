@@ -2,16 +2,16 @@ import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router';
 import classNames from 'classnames/bind';
 
-import styles from './PCard.module.scss';
+import styles from '@/components/PCard/PCard.module.scss';
 import { FaPlus, FaStar } from 'react-icons/fa';
 import { FaRegBookmark, FaBookmark } from 'react-icons/fa';
-import { EColor, EMovieType, ESize } from '../../enums';
-import { Button } from '../Button/Button';
-import { routes } from '../../configs';
-import { slugToString } from '../../utils/handle-slug';
+import { EColor, EMovieType, ESize } from '@/enums';
+import { Button } from '@/components/Button/Button';
+import { routes } from '@/configs';
+import { slugToString } from '@/utils/handle-slug';
 import { GrPlay } from 'react-icons/gr';
-import useMutationBookmark from '../../hooks/useMutationBookmark';
-import AuthProvider from '../AuthProvider/AuthProvider';
+import useMutationBookmark from '@/hooks/useMutationBookmark';
+import AuthProvider from '@/components/AuthProvider/AuthProvider';
 
 const cx = classNames.bind(styles);
 

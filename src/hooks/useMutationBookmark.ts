@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { BookmarkService } from '../services/bookmark.service';
+import { BookmarkService } from '@/services/bookmark.service';
 import { useState, useEffect } from 'react';
 
 const useMutationBookmark = (is_bookmark: boolean, _id: string) => {

@@ -1,8 +1,8 @@
 import { useInfiniteQuery } from '@tanstack/react-query';
-import { IOverviewResponse } from '../interfaces/overview.interface';
-import { OverviewService } from '../services/overview.service';
-import { EMovieSort } from '../enums';
-import { BookmarkService } from '../services/bookmark.service';
+import { IOverviewResponse } from '@/interfaces/overview.interface';
+import { OverviewService } from '@/services/overview.service';
+import { EMovieSort } from '@/enums';
+import { BookmarkService } from '@/services/bookmark.service';
 
 interface OverviewQueryPayload {
     limit: number;

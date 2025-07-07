@@ -1,4 +1,4 @@
-import { EColor } from '../../enums';
+import { EColor } from '@/enums';
 
 function Logo({ className, width = '50px', color = EColor.BLACK_COLOR, marginLeft, marginRight }: { className?: string; width?: string; color?: EColor; marginLeft?: string; marginRight?: string }) {
     return (

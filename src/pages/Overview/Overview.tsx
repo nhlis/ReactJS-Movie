@@ -1,27 +1,27 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import classNames from 'classnames/bind';
-import styles from './Overview.module.scss';
+import styles from '@/pages/Overview/Overview.module.scss';
 import { useNavigate, useParams } from 'react-router';
 import { useInfiniteQuery, useQuery } from '@tanstack/react-query';
 
 import { MdSort } from 'react-icons/md';
 import { BiCaretDown } from 'react-icons/bi';
 
-import { Slide } from '../../components/Slide/Slide';
-import { ListHeroCard } from '../../components/ListHeroCard/ListHeroCard';
+import { Slide } from '@/components/Slide/Slide';
+import { ListHeroCard } from '@/components/ListHeroCard/ListHeroCard';
 
-import { OverviewService } from '../../services/overview.service';
-import { SeasonService } from '../../services/season.service';
-import { EpisodeService } from '../../services/episode.service';
-import { slugToString } from '../../utils/handle-slug';
-import { EColor, EMovieGenre, EMovieSort, ESize } from '../../enums';
-import { ISeason } from '../../interfaces/season.interface';
-import { useClickOutside } from '../../hooks/useClickOutside';
-import { useFilters } from '../../hooks/useFilters';
-import { IEpisodeResponse } from '../../interfaces/episode.interface';
-import { IOverviewResponse } from '../../interfaces/overview.interface';
-import { Button } from '../../components/Button/Button';
-import ECard from '../../components/ECard/ECard';
+import { OverviewService } from '@/services/overview.service';
+import { SeasonService } from '@/services/season.service';
+import { EpisodeService } from '@/services/episode.service';
+import { slugToString } from '@/utils/handle-slug';
+import { EColor, EMovieGenre, EMovieSort, ESize } from '@/enums';
+import { ISeason } from '@/interfaces/season.interface';
+import { useClickOutside } from '@/hooks/useClickOutside';
+import { useFilters } from '@/hooks/useFilters';
+import { IEpisodeResponse } from '@/interfaces/episode.interface';
+import { IOverviewResponse } from '@/interfaces/overview.interface';
+import { Button } from '@/components/Button/Button';
+import ECard from '@/components/ECard/ECard';
 
 const cx = classNames.bind(styles);
 

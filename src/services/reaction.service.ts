@@ -1,7 +1,7 @@
-import { movieApi } from '../configs';
-import { EReactionType } from '../enums';
-import { EEntityType } from '../enums/movie/entity-type.movie.enum';
-import { httpMovieClient } from '../utils/http';
+import { movieApi } from '@/configs';
+import { EReactionType } from '@/enums';
+import { EEntityType } from '@/enums/movie/entity-type.movie.enum';
+import { httpMovieClient } from '@/utils/http';
 
 export class ReactionService {
     static async postReactionLikeEpisode(payload: { entity_id: string }) {

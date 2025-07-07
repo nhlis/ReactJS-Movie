@@ -1,14 +1,14 @@
 import classNames from 'classnames/bind';
-import styles from './SwitchProfile.module.scss';
-import { data } from '../../constants';
-import useAuthStore from '../../stores/auth.store';
-import Avatar from '../../components/Assets/Avatar';
-import { EAuthState, EColor } from '../../enums';
+import styles from '@/pages/SwitchProfile/SwitchProfile.module.scss';
+import { data } from '@/constants';
+import useAuthStore from '@/stores/auth.store';
+import Avatar from '@/components/Assets/Avatar';
+import { EAuthState, EColor } from '@/enums';
 import { useNavigate } from 'react-router';
-import { routes } from '../../configs';
-import { Button } from '../../components/Button/Button';
-import Logo from '../../components/Assets/Logo';
-import { AuthenticationHref } from '../../constants/authentication';
+import { routes } from '@/configs';
+import { Button } from '@/components/Button/Button';
+import Logo from '@/components/Assets/Logo';
+import { AuthenticationHref } from '@/constants/authentication';
 
 const cx = classNames.bind(styles);
 

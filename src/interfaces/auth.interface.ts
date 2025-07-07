@@ -1,4 +1,4 @@
-import { EAuthState } from '../enums';
+import { EAuthState } from '@/enums';
 
 export interface ISessionAccount {
     authuser: number;

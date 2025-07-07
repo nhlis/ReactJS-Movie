@@ -1,5 +1,5 @@
-import { EMovieGenre, EMovieType } from '../enums';
-import { EMovieLanguage } from '../enums/movie/language.movie.enum';
+import { EMovieGenre, EMovieType } from '@/enums';
+import { EMovieLanguage } from '@/enums/movie/language.movie.enum';
 
 export interface IOverviewResponse {
     _id: string;

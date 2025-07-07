@@ -1,4 +1,4 @@
-import { ESeason, SEASONS } from '../enums';
+import { ESeason, SEASONS } from '@/enums';
 
 export const getSeason = (): { name: ESeason; year: number } => {
     const today = new Date();

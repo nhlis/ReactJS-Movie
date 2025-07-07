@@ -1,5 +1,5 @@
 import React from 'react';
-import useAuthStore from '../../stores/auth.store';
+import useAuthStore from '@/stores/auth.store';
 
 function AuthProvider({ children, fallback, onAuth }: { children: React.ReactElement; fallback?: () => void; onAuth?: () => void }) {
     const { is_login, setAuthStore } = useAuthStore();

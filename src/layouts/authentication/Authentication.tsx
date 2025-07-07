@@ -1,8 +1,8 @@
 import React from 'react';
-import { useAuthSession } from '../../hooks/useAuthSession';
-import useAuthStore from '../../stores/auth.store';
+import { useAuthSession } from '@/hooks/useAuthSession';
+import useAuthStore from '@/stores/auth.store';
 
-import styles from './Authentication.module.scss';
+import styles from '@/layouts/authentication/Authentication.module.scss';
 import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);

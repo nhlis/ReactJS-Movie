@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import styles from './Notification.module.scss';
+import styles from '@/pages/Notification/Notification.module.scss';
 import classNames from 'classnames/bind';
-import { Empty } from '../../components/Empty/Empty';
-import { data } from '../../constants';
+import { Empty } from '@/components/Empty/Empty';
+import { data } from '@/constants';
 
 const cx = classNames.bind(styles);
 

@@ -1,7 +1,7 @@
-import { movieApi } from '../configs';
-import { EMovieSort } from '../enums';
-import { IOverviewResponse } from '../interfaces/overview.interface';
-import { httpMovieClient } from '../utils/http';
+import { movieApi } from '@/configs';
+import { EMovieSort } from '@/enums';
+import { IOverviewResponse } from '@/interfaces/overview.interface';
+import { httpMovieClient } from '@/utils/http';
 
 export class BookmarkService {
     static async postBookmark(payload: { overview_id: string }): Promise<void> {

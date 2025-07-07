@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import classNames from 'classnames/bind';
-import styles from './Slide.module.scss';
-import { AgeRating14, AgeRating16 } from '../Assets/AgeRating';
-import { Button } from '../Button/Button';
+import styles from '@/components/Slide/Slide.module.scss';
+import { AgeRating14, AgeRating16 } from '@/components/Assets/AgeRating';
+import { Button } from '@/components/Button/Button';
 import { FaRegBookmark, FaBookmark } from 'react-icons/fa';
-import { EAgeRating, EColor, EMovieType, ESize } from '../../enums';
+import { EAgeRating, EColor, EMovieType, ESize } from '@/enums';
 import { RiPlayLargeLine } from 'react-icons/ri';
-import { routes } from '../../configs/routes/routes';
+import { routes } from '@/configs/routes/routes';
 import { FaRegStar, FaStar, FaStarHalfAlt } from 'react-icons/fa';
-import { slugToString } from '../../utils/handle-slug';
-import { IOverviewResponse } from '../../interfaces/overview.interface';
-import useMutationBookmark from '../../hooks/useMutationBookmark';
-import useMutationRating from '../../hooks/useMutationRating';
-import AuthProvider from '../AuthProvider/AuthProvider';
+import { slugToString } from '@/utils/handle-slug';
+import { IOverviewResponse } from '@/interfaces/overview.interface';
+import useMutationBookmark from '@/hooks/useMutationBookmark';
+import useMutationRating from '@/hooks/useMutationRating';
+import AuthProvider from '@/components/AuthProvider/AuthProvider';
 
 const cx = classNames.bind(styles);
 

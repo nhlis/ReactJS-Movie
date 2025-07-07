@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import classNames from 'classnames/bind';
 
-import styles from './Button.module.scss';
+import styles from '@/components/Button/Button.module.scss';
 const cx = classNames.bind(styles);
 
 interface ButtonProps {

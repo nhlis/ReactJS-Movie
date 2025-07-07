@@ -1,22 +1,22 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import classNames from 'classnames/bind';
 
-import styles from './Bookmark.module.scss';
-import { Empty } from '../../components/Empty/Empty';
-import { Button } from '../../components/Button/Button';
+import styles from '@/pages/Bookmark/Bookmark.module.scss';
+import { Empty } from '@/components/Empty/Empty';
+import { Button } from '@/components/Button/Button';
 import { MdSort } from 'react-icons/md';
 import { LuSettings2 } from 'react-icons/lu';
-import { EColor, EMovieSort, EMovieType, ESize } from '../../enums';
+import { EColor, EMovieSort, EMovieType, ESize } from '@/enums';
 import { FaRegBookmark } from 'react-icons/fa';
-import { data } from '../../constants';
-import { useBookmarks } from '../../hooks/useQueryOverviews';
-import { GirdCard } from '../../components/GirdCard/GirdCard';
-import { Filters } from '../../interfaces/overview.interface';
-import { PCard } from '../../components/PCard/PCard';
-import { useFilters } from '../../hooks/useFilters';
-import { useClickOutside } from '../../hooks/useClickOutside';
-import FilterDropdown from '../../components/FilterDropdown/FilterDropdown';
-import { IOverviewResponse } from '../../interfaces/overview.interface';
+import { data } from '@/constants';
+import { useBookmarks } from '@/hooks/useQueryOverviews';
+import { GirdCard } from '@/components/GirdCard/GirdCard';
+import { Filters } from '@/interfaces/overview.interface';
+import { PCard } from '@/components/PCard/PCard';
+import { useFilters } from '@/hooks/useFilters';
+import { useClickOutside } from '@/hooks/useClickOutside';
+import FilterDropdown from '@/components/FilterDropdown/FilterDropdown';
+import { IOverviewResponse } from '@/interfaces/overview.interface';
 
 const cx = classNames.bind(styles);
 
