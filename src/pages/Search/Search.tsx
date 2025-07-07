@@ -1,22 +1,22 @@
 import classNames from 'classnames/bind';
-import styles from './Search.module.scss';
-import { Button } from '../../components/Button/Button';
+import styles from '@/pages/Search/Search.module.scss';
+import { Button } from '@/components/Button/Button';
 import { MdOutlineClose } from 'react-icons/md';
-import { ESize } from '../../enums';
+import { ESize } from '@/enums';
 import { useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router';
-import useDebounce from '../../hooks/useDebounce';
-import { PCard } from '../../components/PCard/PCard';
-import { Empty } from '../../components/Empty/Empty';
-import { routes } from '../../configs';
+import useDebounce from '@/hooks/useDebounce';
+import { PCard } from '@/components/PCard/PCard';
+import { Empty } from '@/components/Empty/Empty';
+import { routes } from '@/configs';
 import { useQuery } from '@tanstack/react-query';
-import { OverviewService } from '../../services/overview.service';
-import { IOverviewResponse } from '../../interfaces/overview.interface';
-import { data } from '../../constants';
-import { SearchService } from '../../services/search.service';
-import useAuthStore from '../../stores/auth.store';
-import { IResponeSeachHistory } from '../../interfaces/search-history.interface';
-import useMutationSearchHistory from '../../hooks/useMutationSearchHistory';
+import { OverviewService } from '@/services/overview.service';
+import { IOverviewResponse } from '@/interfaces/overview.interface';
+import { data } from '@/constants';
+import { SearchService } from '@/services/search.service';
+import useAuthStore from '@/stores/auth.store';
+import { IResponeSeachHistory } from '@/interfaces/search-history.interface';
+import useMutationSearchHistory from '@/hooks/useMutationSearchHistory';
 
 const cx = classNames.bind(styles);
 

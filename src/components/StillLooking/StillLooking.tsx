@@ -1,9 +1,9 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import styles from './StillLooking.module.scss';
-import { Button } from '../Button/Button';
-import { data } from '../../constants';
-import { routes } from '../../configs';
+import styles from '@/components/StillLooking/StillLooking.module.scss';
+import { Button } from '@/components/Button/Button';
+import { data } from '@/constants';
+import { routes } from '@/configs';
 
 const cx = classNames.bind(styles);
 

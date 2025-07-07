@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import classNames from 'classnames/bind';
-import styles from './Genre.module.scss';
-import { EMovieGenre } from '../../enums';
+import styles from '@/pages/Genre/Genre.module.scss';
+import { EMovieGenre } from '@/enums';
 import { useParams } from 'react-router';
-import { slugToEnum, slugToString } from '../../utils/handle-slug';
-import { ListHeroCard } from '../../components/ListHeroCard/ListHeroCard';
-import { data } from '../../constants';
-import { OverviewService } from '../../services/overview.service';
+import { slugToEnum, slugToString } from '@/utils/handle-slug';
+import { ListHeroCard } from '@/components/ListHeroCard/ListHeroCard';
+import { data } from '@/constants';
+import { OverviewService } from '@/services/overview.service';
 import { useQueries } from '@tanstack/react-query';
 
 const cx = classNames.bind(styles);

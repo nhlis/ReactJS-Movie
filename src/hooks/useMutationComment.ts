@@ -1,7 +1,7 @@
 import { QueryKey, useMutation, useQueryClient } from '@tanstack/react-query';
-import { CommentService } from '../services/comment.service';
-import useAuthStore from '../stores/auth.store';
-import { EMovieSort } from '../enums';
+import { CommentService } from '@/services/comment.service';
+import useAuthStore from '@/stores/auth.store';
+import { EMovieSort } from '@/enums';
 
 export const useMutationPostComment = (
     payload: {

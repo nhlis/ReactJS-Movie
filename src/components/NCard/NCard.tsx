@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import styles from './NCard.module.scss';
+import styles from '@/components/NCard/NCard.module.scss';
 
 const cx = classNames.bind(styles);
 

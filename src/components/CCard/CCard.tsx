@@ -1,9 +1,9 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import styles from './CCard.module.scss';
+import styles from '@/components/CCard/CCard.module.scss';
 import { IoPlayOutline } from 'react-icons/io5';
-import { Crown } from '../Assets/Crown';
-import { ESize } from '../../enums';
+import { Crown } from '@/components/Assets/Crown';
+import { ESize } from '@/enums';
 
 const cx = classNames.bind(styles);
 

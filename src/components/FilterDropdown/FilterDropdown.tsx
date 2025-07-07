@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 
-import styles from './FilterDropdown.module.scss';
+import styles from '@/components/FilterDropdown/FilterDropdown.module.scss';
 
 const cx = classNames.bind(styles);
 

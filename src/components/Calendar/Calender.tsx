@@ -1,13 +1,13 @@
 import React, { useState, useMemo } from 'react';
 import classNames from 'classnames/bind';
-import styles from './Calendar.module.scss';
-import { CCard } from '../CCard/CCard';
+import styles from '@/components/Calendar/Calendar.module.scss';
+import { CCard } from '@/components/CCard/CCard';
 import { GrFormNext } from 'react-icons/gr';
-import { Button } from '../Button/Button';
+import { Button } from '@/components/Button/Button';
 import { BsPlayBtn } from 'react-icons/bs';
-import { ESize } from '../../enums';
-import { groupByDate } from '../../utils/group-date';
-import { getFormattedDateStrings } from '../../utils/get-formatted-date-string';
+import { ESize } from '@/enums';
+import { groupByDate } from '@/utils/group-date';
+import { getFormattedDateStrings } from '@/utils/get-formatted-date-string';
 
 const cx = classNames.bind(styles);
 

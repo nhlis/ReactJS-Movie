@@ -1,18 +1,18 @@
 import React from 'react';
 
-import { routes } from '../configs';
-import Main from '../layouts/main/Main';
-import Overview from '../pages/Overview/Overview';
-import Watch from '../pages/Watch/Watch';
-import Home from '../pages/Home/Home';
-import Search from '../pages/Search/Search';
-import SwitchProfile from '../pages/SwitchProfile/SwitchProfile';
-import History from '../pages/History/History';
-import Bookmark from '../pages/Bookmark/Bookmark';
-import New from '../pages/New/New';
-import Popular from '../pages/Popular/Popular';
-import Genre from '../pages/Genre/Genre';
-import Simulcast from '../pages/Simulcast/Simulcast';
+import { routes } from '@/configs';
+import Main from '@/layouts/main/Main';
+import Overview from '@/pages/Overview/Overview';
+import Watch from '@/pages/Watch/Watch';
+import Home from '@/pages/Home/Home';
+import Search from '@/pages/Search/Search';
+import SwitchProfile from '@/pages/SwitchProfile/SwitchProfile';
+import History from '@/pages/History/History';
+import Bookmark from '@/pages/Bookmark/Bookmark';
+import New from '@/pages/New/New';
+import Popular from '@/pages/Popular/Popular';
+import Genre from '@/pages/Genre/Genre';
+import Simulcast from '@/pages/Simulcast/Simulcast';
 
 interface Router {
     path: string;

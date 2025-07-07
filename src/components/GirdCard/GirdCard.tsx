@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import classNames from 'classnames/bind';
 
-import styles from './GirdCard.module.scss';
+import styles from '@/components/GirdCard/GirdCard.module.scss';
 
 const cx = classNames.bind(styles);
 

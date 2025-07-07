@@ -1,4 +1,4 @@
-import { EReactionType } from '../enums';
+import { EReactionType } from '@/enums';
 
 export interface IEpisodeResponse {
     _id: string;

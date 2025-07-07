@@ -1,7 +1,7 @@
-import { movieApi } from '../configs';
-import { EMovieSort } from '../enums';
-import { CommentDocument, ICommentRespone } from '../interfaces/comment.interface';
-import { httpMovieClient } from '../utils/http';
+import { movieApi } from '@/configs';
+import { EMovieSort } from '@/enums';
+import { CommentDocument, ICommentRespone } from '@/interfaces/comment.interface';
+import { httpMovieClient } from '@/utils/http';
 
 export class CommentService {
     static async getCommentsByEpisode(episode_id: string, limit: number, last_id: string | undefined, created_at: EMovieSort): Promise<{ comments: ICommentRespone[]; hasMore: boolean }> {

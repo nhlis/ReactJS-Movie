@@ -3,18 +3,18 @@ import classNames from 'classnames/bind';
 import { MdSort } from 'react-icons/md';
 import { LuSettings2 } from 'react-icons/lu';
 
-import styles from './New.module.scss';
-import { EColor, EMovieType, ESize } from '../../enums';
+import styles from '@/pages/New/New.module.scss';
+import { EColor, EMovieType, ESize } from '@/enums';
 
-import { Button } from '../../components/Button/Button';
-import { PCard } from '../../components/PCard/PCard';
-import { GirdCard } from '../../components/GirdCard/GirdCard';
-import { useFilters } from '../../hooks/useFilters';
-import { useClickOutside } from '../../hooks/useClickOutside';
-import FilterDropdown from '../../components/FilterDropdown/FilterDropdown';
-import BrowseDropdown from '../../components/BrowserDropdown/BrowserDropdown';
-import { Filters, IOverviewResponse } from '../../interfaces/overview.interface';
-import { useLastedReleases } from '../../hooks/useQueryOverviews';
+import { Button } from '@/components/Button/Button';
+import { PCard } from '@/components/PCard/PCard';
+import { GirdCard } from '@/components/GirdCard/GirdCard';
+import { useFilters } from '@/hooks/useFilters';
+import { useClickOutside } from '@/hooks/useClickOutside';
+import FilterDropdown from '@/components/FilterDropdown/FilterDropdown';
+import BrowseDropdown from '@/components/BrowserDropdown/BrowserDropdown';
+import { Filters, IOverviewResponse } from '@/interfaces/overview.interface';
+import { useLastedReleases } from '@/hooks/useQueryOverviews';
 
 const cx = classNames.bind(styles);
 

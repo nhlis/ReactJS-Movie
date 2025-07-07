@@ -3,10 +3,10 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-import styles from './ListHeroCard.module.scss';
-import { PCard } from '../PCard/PCard';
-import { HeroCard } from '../Hero-Card/Hero-Card';
-import { IOverviewResponse } from '../../interfaces/overview.interface';
+import styles from '@/components/ListHeroCard/ListHeroCard.module.scss';
+import { PCard } from '@/components/PCard/PCard';
+import { HeroCard } from '@/components/Hero-Card/Hero-Card';
+import { IOverviewResponse } from '@/interfaces/overview.interface';
 
 export const ListHeroCard: React.FC<{
     title: string;

@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { HistoryService } from '../services/history.service';
-import useAuthStore from '../stores/auth.store';
+import { HistoryService } from '@/services/history.service';
+import useAuthStore from '@/stores/auth.store';
 
 const useMutationHistory = () => {
     const queryClient = useQueryClient();

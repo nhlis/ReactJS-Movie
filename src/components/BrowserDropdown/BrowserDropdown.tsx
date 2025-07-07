@@ -1,10 +1,10 @@
 import classNames from 'classnames/bind';
 import { Link, useLocation, useMatch, useNavigate } from 'react-router';
 
-import styles from './BrowserDropdown.module.scss';
-import { getSeason } from '../../utils/get-season';
-import { routes } from '../../configs';
-import { stringToSlug } from '../../utils/handle-slug';
+import styles from '@/components/BrowserDropdown/BrowserDropdown.module.scss';
+import { getSeason } from '@/utils/get-season';
+import { routes } from '@/configs';
+import { stringToSlug } from '@/utils/handle-slug';
 import React from 'react';
 
 const cx = classNames.bind(styles);

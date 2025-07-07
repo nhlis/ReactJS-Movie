@@ -1,6 +1,6 @@
-import { movieApi } from '../configs';
-import { IHistoryRespone } from '../interfaces/history.interface';
-import { httpMovieClient } from '../utils/http';
+import { movieApi } from '@/configs';
+import { IHistoryRespone } from '@/interfaces/history.interface';
+import { httpMovieClient } from '@/utils/http';
 
 export class HistoryService {
     static async getHistories(payload: { limit: number; last_id?: string }): Promise<{ histories: IHistoryRespone[]; hasMore: boolean }> {

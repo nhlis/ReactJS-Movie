@@ -1,6 +1,6 @@
 import { useInfiniteQuery } from '@tanstack/react-query';
-import { HistoryService } from '../services/history.service';
-import { IHistoryRespone } from '../interfaces/history.interface';
+import { HistoryService } from '@/services/history.service';
+import { IHistoryRespone } from '@/interfaces/history.interface';
 
 interface OverviewQueryPayload {
     limit: number;

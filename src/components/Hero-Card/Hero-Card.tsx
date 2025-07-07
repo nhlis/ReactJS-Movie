@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import classNames from 'classnames/bind';
-import styles from './Hero-Card.module.scss';
+import styles from '@/components/Hero-Card/Hero-Card.module.scss';
 import { GrFormNext, GrFormPrevious } from 'react-icons/gr';
-import useDebounce from '../../hooks/useDebounce';
-import { Button } from '../Button/Button';
-import { EColor, ESize } from '../../enums';
+import useDebounce from '@/hooks/useDebounce';
+import { Button } from '@/components/Button/Button';
+import { EColor, ESize } from '@/enums';
 
 const cx = classNames.bind(styles);
 

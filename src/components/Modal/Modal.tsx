@@ -1,11 +1,11 @@
-import styles from './Modal.module.scss';
+import styles from '@/components/Modal/Modal.module.scss';
 import classNames from 'classnames/bind';
 import { IoClose } from 'react-icons/io5';
 import { useEffect } from 'react';
-import useAuthStore from '../../stores/auth.store';
-import { EColor, ESize } from '../../enums';
-import { Button } from '../Button/Button';
-import { data } from '../../constants';
+import useAuthStore from '@/stores/auth.store';
+import { EColor, ESize } from '@/enums';
+import { Button } from '@/components/Button/Button';
+import { data } from '@/constants';
 
 const cx = classNames.bind(styles);
 

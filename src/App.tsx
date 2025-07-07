@@ -1,6 +1,6 @@
 import { Suspense, Fragment } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router';
-import RoutesConfig from './routes/routes';
+import RoutesConfig from '@/routes/routes';
 
 function App() {
     return (

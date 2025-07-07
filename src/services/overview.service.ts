@@ -1,9 +1,9 @@
-import { movieApi } from '../configs/apis/movie.api';
-import { EMovieGenre, EMovieSort } from '../enums';
-import { IOverviewResponse } from '../interfaces/overview.interface';
-import { httpMovieClient } from '../utils/http';
-import { getDateFromSeason } from '../utils/get-date-from-season';
-import { getSeason } from '../utils/get-season';
+import { movieApi } from '@/configs/apis/movie.api';
+import { EMovieGenre, EMovieSort } from '@/enums';
+import { IOverviewResponse } from '@/interfaces/overview.interface';
+import { httpMovieClient } from '@/utils/http';
+import { getDateFromSeason } from '@/utils/get-date-from-season';
+import { getSeason } from '@/utils/get-season';
 
 export class OverviewService {
     static async getOverviewsHeroSlides(limit: number): Promise<{ overviews: IOverviewResponse[]; hasMore: boolean }> {

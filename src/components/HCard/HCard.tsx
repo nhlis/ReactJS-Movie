@@ -1,15 +1,15 @@
-import styles from './HCard.module.scss';
+import styles from '@/components/HCard/HCard.module.scss';
 import classNames from 'classnames/bind';
-import { Crown } from '../Assets/Crown';
-import { Button } from '../Button/Button';
-import { EColor, EMovieType, ESize } from '../../enums';
-import { dateToString } from '../../utils/date-to-string';
+import { Crown } from '@/components/Assets/Crown';
+import { Button } from '@/components/Button/Button';
+import { EColor, EMovieType, ESize } from '@/enums';
+import { dateToString } from '@/utils/date-to-string';
 import { CiCalendar } from 'react-icons/ci';
 import { RiPlayLargeLine } from 'react-icons/ri';
-import { routes } from '../../configs';
+import { routes } from '@/configs';
 import { useNavigate } from 'react-router';
 import { MdDelete } from 'react-icons/md';
-import useMutationHistory from '../../hooks/useMutationHistory';
+import useMutationHistory from '@/hooks/useMutationHistory';
 
 const cx = classNames.bind(styles);
 

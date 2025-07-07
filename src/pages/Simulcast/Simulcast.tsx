@@ -1,21 +1,21 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import classNames from 'classnames/bind';
-import styles from './Simulcast.module.scss';
+import styles from '@/pages/Simulcast/Simulcast.module.scss';
 import { useNavigate, useParams } from 'react-router';
-import { EColor, ESeason, ESize } from '../../enums';
-import { PCard } from '../../components/PCard/PCard';
-import { GirdCard } from '../../components/GirdCard/GirdCard';
-import { getSeasonsFromYear } from '../../utils/get-seasons-from-year';
-import usePreventScroll from '../../hooks/usePreventScroll';
+import { EColor, ESeason, ESize } from '@/enums';
+import { PCard } from '@/components/PCard/PCard';
+import { GirdCard } from '@/components/GirdCard/GirdCard';
+import { getSeasonsFromYear } from '@/utils/get-seasons-from-year';
+import usePreventScroll from '@/hooks/usePreventScroll';
 import { BiCaretDown } from 'react-icons/bi';
-import { slugToString, stringToSlug } from '../../utils/handle-slug';
+import { slugToString, stringToSlug } from '@/utils/handle-slug';
 import { MdSort } from 'react-icons/md';
-import { routes } from '../../configs';
-import { useClickOutside } from '../../hooks/useClickOutside';
-import BrowseDropdown from '../../components/BrowserDropdown/BrowserDropdown';
-import { getDateFromSeason } from '../../utils/get-date-from-season';
-import { IOverviewResponse } from '../../interfaces/overview.interface';
-import { useSimulcastSesson } from '../../hooks/useQueryOverviews';
+import { routes } from '@/configs';
+import { useClickOutside } from '@/hooks/useClickOutside';
+import BrowseDropdown from '@/components/BrowserDropdown/BrowserDropdown';
+import { getDateFromSeason } from '@/utils/get-date-from-season';
+import { IOverviewResponse } from '@/interfaces/overview.interface';
+import { useSimulcastSesson } from '@/hooks/useQueryOverviews';
 
 const cx = classNames.bind(styles);
 

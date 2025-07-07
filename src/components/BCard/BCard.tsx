@@ -1,11 +1,11 @@
 import classNames from 'classnames/bind';
-import styles from './BCard.module.scss';
-import { Button } from '../Button/Button';
-import { EColor, ESize } from '../../enums';
+import styles from '@/components/BCard/BCard.module.scss';
+import { Button } from '@/components/Button/Button';
+import { EColor, ESize } from '@/enums';
 import { FaRegBookmark, FaBookmark } from 'react-icons/fa';
-import { routes } from '../../configs/routes/routes';
-import useMutationBookmark from '../../hooks/useMutationBookmark';
-import AuthProvider from '../AuthProvider/AuthProvider';
+import { routes } from '@/configs/routes/routes';
+import useMutationBookmark from '@/hooks/useMutationBookmark';
+import AuthProvider from '@/components/AuthProvider/AuthProvider';
 
 const cx = classNames.bind(styles);
 

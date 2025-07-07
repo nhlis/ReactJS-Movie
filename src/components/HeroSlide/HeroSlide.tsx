@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
-import styles from './HeroSlide.module.scss';
+import styles from '@/components/HeroSlide/HeroSlide.module.scss';
 import classNames from 'classnames/bind';
-import { useAutoSlide } from '../../hooks/useAutoSlide';
+import { useAutoSlide } from '@/hooks/useAutoSlide';
 import { MdNavigateBefore, MdNavigateNext } from 'react-icons/md';
-import { ESize } from '../../enums';
+import { ESize } from '@/enums';
 
 const cx = classNames.bind(styles);
 

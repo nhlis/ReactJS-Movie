@@ -1,4 +1,4 @@
-import { ESeason, SEASONS } from '../enums';
+import { ESeason, SEASONS } from '@/enums';
 
 export const getDateFromSeason = (season: ESeason, year: number) => {
     const seasonData = SEASONS.find((s) => s.name === season);

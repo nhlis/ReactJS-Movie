@@ -1,7 +1,7 @@
-import { movieApi } from '../configs';
-import { EMovieSort } from '../enums';
-import { IEpisodeResponse } from '../interfaces/episode.interface';
-import { httpMovieClient } from '../utils/http';
+import { movieApi } from '@/configs';
+import { EMovieSort } from '@/enums';
+import { IEpisodeResponse } from '@/interfaces/episode.interface';
+import { httpMovieClient } from '@/utils/http';
 
 export class EpisodeService {
     static async getEpisodesBySeason(season_id: string, limit: number, last_id: string | undefined, release_date: EMovieSort): Promise<{ episodes: IEpisodeResponse[]; hasMore: boolean }> {

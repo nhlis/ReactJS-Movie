@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import styles from './LargeCard.module.scss';
-import BCard from '../BCard/BCard';
-import { IOverviewResponse } from '../../interfaces/overview.interface';
+import styles from '@/components/LargeCard/LargeCard.module.scss';
+import BCard from '@/components/BCard/BCard';
+import { IOverviewResponse } from '@/interfaces/overview.interface';
 
 const cx = classNames.bind(styles);
 

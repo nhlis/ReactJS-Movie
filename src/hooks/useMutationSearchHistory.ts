@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { SearchService } from '../services/search.service';
+import { SearchService } from '@/services/search.service';
 
 const useMutationSearchHistory = () => {
     const queryClient = useQueryClient();

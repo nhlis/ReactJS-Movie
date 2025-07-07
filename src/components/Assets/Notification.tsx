@@ -1,4 +1,4 @@
-import { EColor } from '../../enums';
+import { EColor } from '@/enums';
 
 function Notification({
     className,
