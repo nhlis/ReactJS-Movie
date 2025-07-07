@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { routes } from '@/configs';
-import Main from '@/layouts/main/Main';
+import Main from '@/layouts/Main/Main';
 import Overview from '@/pages/Overview/Overview';
 import Watch from '@/pages/Watch/Watch';
 import Home from '@/pages/Home/Home';
